@@ -4,8 +4,7 @@ export default function Hint() {
   return (
     <>
     <header style={{textAlign: 'center',  whiteSpace: "nowrap", display: 'inline'}}>
-          <h1 class="my-3 mx-2"><b>Trigonometric Equation: </b></h1>
-          <hr />
+      <h2 className='header'><b className="text">Trigonometric Equation:</b></h2>
     </header>
     <section className='my-5 mx-4'>
             <h3>Your Equation: </h3> 

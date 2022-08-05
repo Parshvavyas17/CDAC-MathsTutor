@@ -4,8 +4,7 @@ export default function WrongP2() {
   return (
     <>
         <header style={{textAlign: 'center',  whiteSpace: "nowrap", display: 'inline'}}>
-          <h1 class="my-3 mx-2"><b>Polynomial Equation: </b></h1>
-          <hr />
+        <h2 className='header'><b className="text">Polynomial Equation:</b></h2>
         </header>
         <section>
             <h5 className='my-5 mx-5'>

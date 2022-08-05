@@ -4,10 +4,9 @@ export default function Identity() {
   return (
     <>
     <header style={{textAlign: 'center',  whiteSpace: "nowrap", display: 'inline'}}>
-          <h1 class="my-3 mx-2"><b>Trigonometric Equation: </b></h1>
-          <hr />
+      <h2 className='header'><b className="text">Trigonometric Equation:</b></h2>
     </header>
-    <section>
+    <section style={{paddingLeft: '10px'}}>
         <h3 className='my-5'>
             Identity: <br />
             cos<sup>2</sup>x = ((1+cos 2x)/2)
