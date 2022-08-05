@@ -18,7 +18,7 @@ export default function Identity() {
         <h3 className='my-5'>
             Now After Substituting we Integrated 1+cos 2x
         </h3>
-        <a href="/tw2"><button className='btn btn-outline-success my-3 mx-10' style={{height: '75px', width: '100px',borderRadius: '50%', textAlign: 'center', marginLeft: '25px'}}>Next</button></a>
+        <a href="/tw2"><button className='btn btn-outline-success my-3 mx-10' style={{height: '75px', width: '100px',borderRadius: '50%', textAlign: 'center', marginLeft: '25px',color:"white",backgroundColor:'#548CFF'}}>Next</button></a>
     </section>
       
     </>
