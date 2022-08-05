@@ -6,7 +6,7 @@ export default function Page1() {
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><b>Contents</b></a>
+    <a class="navbar-brand" href="/"><b>Contents</b></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -22,7 +22,7 @@ export default function Page1() {
           <a class="nav-link active" aria-current="page" href="#Video Tutorial">Video Tutorial</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#Simulation">Simulation</a>
+          <a class="nav-link active" aria-current="page" href="/Page2">Simulation</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#Conclusion">Conclusion</a>

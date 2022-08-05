@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+// import {Link} from 'react-router-dom';
 
 export default function Heading() {
     const m =
@@ -20,9 +21,9 @@ export default function Heading() {
       <h2 style={{textAlign: 'center'}}><b>Application of Definite Integral</b></h2>
       {/* <img style={{display: 'inline', height: '25%', width: '25%'}}src="https://www.adda247.com/jobs/wp-content/uploads/sites/2/2022/04/02164354/integration-formulas.png" alt="" /> */}
       <div style={{display: 'inline'}}>
-      <button  style={{display: 'inline', marginRight: '4px', marginLeft: '1010px',height: '100px',width: '200px', borderRadius: '50%'}} class="btn btn-outline-success my-3" type="submit">Log In</button>
+      <a style={{color: 'black', textDecoration: 'none'}}href="Page1" > <button  style={{display: 'inline', marginRight: '4px', marginLeft: '1010px',height: '100px',width: '200px', borderRadius: '50%'}} class="btn btn-outline-success my-3" type="submit">Log In </button></a>
       <br />
-      <button  style={{display: 'inline', marginRight: '4px', marginLeft: '1010px',height: '100px',width: '200px', borderRadius: '50%'}} class="btn btn-outline-success my-3" type="submit">Sign Up</button>
+      <a style={{color: 'black', textDecoration: 'none'}}href="Page1" ><button  style={{display: 'inline', marginRight: '4px', marginLeft: '1010px',height: '100px',width: '200px', borderRadius: '50%'}} class="btn btn-outline-success my-3" type="submit">Sign Up</button></a>
       </div>
     </>
   )
