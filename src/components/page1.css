@@ -1,0 +1,19 @@
+.nav-container {
+    display: flex;
+    justify-content: center;
+    background-color: #1F4690;
+}
+
+.navbar-brand, .nav-link {
+    color: #FFFFFF !important;
+}
+
+.page1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.page1-content {
+    display: flex;
+    flex-direction: column;
+}

@@ -3,9 +3,9 @@ import React from 'react'
 export default function Trigo() {
   return (
     <>
-    <header style={{textAlign: 'center',  whiteSpace: "nowrap", display: 'inline'}}>
-          <h1 class="my-3 mx-2"><b>Trigonometric Equation: </b></h1>
-          <hr />
+    <header style={{textAlign: 'center',  whiteSpace: "nowrap", display: 'inline',padding:'0px'}}>
+          <h1 style={ {backgroundColor:'#1F4690',color:'white',minHeight:'75px'}}><b>Trigonometric Equation: </b></h1>
+          
     </header>
     <section className='mx-5 my-5' style={{textAlign: 'center', marginLeft: '200px'}}>
         <table style={{borderWidth: '2px', borderColor: 'black', width: '200px', height: '100px'}}> 
@@ -59,8 +59,8 @@ export default function Trigo() {
                 <input className= "mx-5" style={{width: '50px'}} type="number" />
                 <br />
             </form>
-            <a href="/r1"><button className='btn btn-outline-success my-3 mx-10' style={{height: '75px', width: '100px',borderRadius: '50%', textAlign: 'center', marginLeft: '75px'}}>Right</button></a>
-            <a href="/tw1"><button className='btn btn-outline-success my-3 mx-10' style={{height: '75px', width: '100px',borderRadius: '50%', textAlign: 'center', marginLeft: '75px'}}>Wrong</button></a>
+            <a href="/r1"><button className='btn btn-outline-success my-3 mx-10' style={{height: '75px', width: '100px',borderRadius: '50%', textAlign: 'center', marginLeft: '75px',backgroundColor:'#548CFF',color:'white',border:'1px solid black'}}>Right</button></a>
+            <a href="/tw1"><button className='btn btn-outline-success my-3 mx-10' style={{height: '75px', width: '100px',borderRadius: '50%', textAlign: 'center', marginLeft: '75px',backgroundColor:'#548CFF',color:'white',border:'1px solid black'}}>Wrong</button></a>
 
     </section>
       

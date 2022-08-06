@@ -3,10 +3,7 @@ import React from 'react'
 export default function Polynomial() {
   return (
     <>
-        <div style={{textAlign: 'center',  whiteSpace: "nowrap", display: 'inline'}}>
-          <h1 class="my-3 mx-2"><b>Polynomial Equation: </b></h1>
-          <hr />
-        </div>
+        <h2 className='header'><b className="text">Polynomial Equation:</b></h2>
         <div className='my-20'>
             <form action="/">
                 <label htmlFor="noofterms" className='my-3 mx-2'>
