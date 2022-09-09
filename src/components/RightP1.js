@@ -14,7 +14,7 @@ export default function RightP1() {
             <h4 className='my-5'>
                 The Graph is : 
                 <br />
-                <img src="https://www.mathsisfun.com/calculus/images/indefinite-integral.gif" alt="" style={{width: '350px', height: '350px'}} />
+                <img src="auc.png" alt="" style={{width: '350px', height: '350px'}} />
 
             </h4>
 
