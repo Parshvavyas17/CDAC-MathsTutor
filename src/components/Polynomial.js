@@ -1,6 +1,22 @@
 import React from 'react'
+import { useState } from 'react';
 
 export default function Polynomial() {
+
+  const [route, setRoute] = useState("");
+
+    const handleClick=()=>{
+        if(document.getElementById("answer").value == 9)
+        {
+            setRoute("/r1");
+        }
+        else
+        {
+            setRoute("/w1");
+        }
+        
+
+    }
   return (
     <>
         <h2 className='header'><b className="text">Polynomial Equation:</b></h2>
@@ -32,14 +48,14 @@ export default function Polynomial() {
                     The Area Under the Curve is:  
 
                 </label>
-                <input className= "mx-3" style={{width: '50px'}} type="number" />
+                <input className= "mx-3" style={{width: '50px'}} type="number" id="answer"/>
                 <br />
                 
                 
                 
              
             </form>
-            <a href="/r1"><button className='btn btn-outline-success my-3 mx-10' style={{height: '75px', width: '100px',borderRadius: '50%', textAlign: 'center', marginLeft: '75px'}}>Submit</button></a>
+            <a href={route}><button onClick = {handleClick} className='btn btn-outline-success my-3 mx-10' style={{height: '75px', width: '100px',borderRadius: '50%', textAlign: 'center', marginLeft: '75px'}}>Submit</button></a>
            
         </div>
 
