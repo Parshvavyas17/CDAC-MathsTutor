@@ -23,7 +23,7 @@ export default function Trigo() {
           <h1 style={ {backgroundColor:'#1F4690',color:'white',minHeight:'75px'}}><b>Trigonometric Equation: </b></h1>
           
     </header>
-    <section className='mx-5 my-5' style={{textAlign: 'center', marginLeft: '200px'}}>
+    {/*  <section className='mx-5 my-5' style={{textAlign: 'center', marginLeft: '200px'}}>
         <table style={{borderWidth: '2px', borderColor: 'black', width: '200px', height: '100px'}}> 
             <tr style={{borderWidth: '2px', borderColor: 'black'}}>
                 <td style={{borderWidth: '2px', borderColor: 'black'}}>sin</td>
@@ -37,16 +37,17 @@ export default function Trigo() {
             </tr>
         </table>
     </section>
-    <section>
+     */}
+     <section>
     <form action="/">
                 <label htmlFor="noofterms" className='my-3 mx-2'>
-                    Enter the number of terms: 
+                   
                 </label>
                 {/* <input className= "mx-5" style={{width: '50px'}} type="number" /> */}
-                2
+            
                 <br />
                 <label htmlFor="noofterms" className='my-3 mx-2'>
-                    Enter the Equation: 
+                    The Equation to be integrated is :
                 </label>
                 {/* <input className= "" style={{width: '50px',marginLeft: '10px', marginRight: '2px'}} type="number" />
                 <input className= "" style={{width: '50px',marginLeft: '10px', marginRight: '2px'}} type="number" />
