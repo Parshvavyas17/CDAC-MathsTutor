@@ -4,9 +4,9 @@ import { useState } from 'react';
 export default function Trigo() {
     const [route, setRoute] = useState("");
     const handleClick=()=>{
-        if(document.getElementById("answer").value == 2)
+        if(document.getElementById("answer").value === '2')
         {
-            setRoute("/r1");
+            setRoute("/tr1");
         }
         else
         {
@@ -23,7 +23,11 @@ export default function Trigo() {
           <h1 style={ {backgroundColor:'#1F4690',color:'white',minHeight:'75px'}}><b>Trigonometric Equation: </b></h1>
           
     </header>
+<<<<<<< Updated upstream
     {/*  <section className='mx-5 my-5' style={{textAlign: 'center', marginLeft: '200px'}}>
+=======
+    {/* <section className='mx-5 my-5' style={{textAlign: 'center', marginLeft: '200px'}}>
+>>>>>>> Stashed changes
         <table style={{borderWidth: '2px', borderColor: 'black', width: '200px', height: '100px'}}> 
             <tr style={{borderWidth: '2px', borderColor: 'black'}}>
                 <td style={{borderWidth: '2px', borderColor: 'black'}}>sin</td>
@@ -36,9 +40,14 @@ export default function Trigo() {
                 <td style={{borderWidth: '2px', borderColor: 'black'}}>cot</td>
             </tr>
         </table>
+<<<<<<< Updated upstream
     </section>
      */}
      <section>
+=======
+    </section> */}
+    <section>
+>>>>>>> Stashed changes
     <form action="/">
                 <label htmlFor="noofterms" className='my-3 mx-2'>
                    
