@@ -23,7 +23,7 @@ export default function WrongP3() {
                 </ol>
             </h5>
 
-            <h3 className='my-1 mx-5'>
+            <h3 className=' mx-2'>
  To integrate the equation the following steps need to be followed :  
               </h3>
 
@@ -58,7 +58,7 @@ export default function WrongP3() {
   
 </ol>    
 
-<button type="button" className="btn btn-warning  mx-5" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+<button type="button" className="btn btn-warning my-2 mx-5" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
   Click here for Second Hint
 </button>
 
@@ -99,7 +99,7 @@ export default function WrongP3() {
  {/*   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Try Now</button>  */}
  <br></br>
 
-    <a href='/w1'><button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button></a>
+    <a href='/w1'><button type="button" class="btn btn-dark btn-lg btn-block">Understood</button></a>
 
     </div>
   </div>

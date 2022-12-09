@@ -115,12 +115,34 @@ export default function WrongP2() {
                 <input className= "" style={{width: '50px',marginLeft: '10px', marginRight: '2px'}} type="number" name='loCo3' value={loCo3} onChange={handleLoCo3} />
                 <sup><input type="number" style={{width: '40px'}} name='loPo3' value={loPo3} onChange={handleLoPo3} /></sup>)
 
-                <button className='btn btn-outline-success my-3 mx-10' style={{height: '75px', width: '100px',borderRadius: '50%', textAlign: 'center', marginLeft: '75px'}} onClick={handleSubmit} >Submit</button>
+                <button className='btn btn-outline-success my-3 mx-10' style={{height: '75px', width: '100px',borderRadius: '50%', textAlign: 'center', marginLeft: '75px',marginTop:'100px'}} onClick={handleSubmit} >Submit</button>
                 <br />
             </h5>
+            
             {/* <a href="/r1"><button className='btn btn-outline-success my-3 mx-10' style={{height: '75px', width: '100px',borderRadius: '50%', textAlign: 'center', marginLeft: '75px'}}>Right</button></a>
             <a href="/w3"><button className='btn btn-outline-success my-3 mx-10' style={{height: '75px', width: '100px',borderRadius: '50%', textAlign: 'center', marginLeft: '75px'}}>Wrong</button></a> */}
-       
+       <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Click here for Hint
+</button>
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Hint</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Formula to be applied : <sub>b</sub>∫<sup>a</sup>  f(x) dx = F(b)- F(a) <br></br> Here F(b) is the integrated equation after substituting the upper limit 
+        <br></br> Similarly , F(a) is the integrated equation after substituting the lower limit 
+      </div>
+      <div class="modal-footer">
+        {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
+        <button type="button" class="btn btn-dark"data-bs-dismiss="modal">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
 
         </section>
       
