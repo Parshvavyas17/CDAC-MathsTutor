@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import Polynomial from './components/Polynomial';
 import WrongP1 from './components/WrongP1';
 import RightP1 from './components/RightP1';
+import PolyHint from './components/PolyHint';
 import WrongP2 from './components/WrongP2';
 import WrongP3 from './components/WrongP3';
 import Trigo from './components/Trigo';
@@ -28,6 +29,7 @@ function App() {
           <Route path="/r1" element={<RightP1 />}></Route>
           <Route path="/w2" element={<WrongP2 />}></Route>
           <Route path="/w3" element={<WrongP3 />}></Route>
+          <Route path = "/PolyHint" element = {<PolyHint/>}></Route>
           <Route path="/trigo" element={<Trigo />}></Route>
           <Route path="/tw1" element={<TWrong1 />}></Route>
           <Route path="/hint" element={<Hint />}></Route>

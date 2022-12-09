@@ -88,8 +88,7 @@ export default function WrongP2() {
         </header>
         <section>
             <h5 className='my-5 mx-5'>
-                Substitute the values of a and b (values of limits):
-                <sup>b</sup><sub>a</sub>∫ f(x)dx=F(b)-F(a)   
+   
             </h5>
             <h5 className='my-5 mx-5'>
                 In this case f(x) =  3x <sup>2</sup> -2x+5 and b (upperlimit) = 2 and a (lowerlimit)=1
