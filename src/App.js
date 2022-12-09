@@ -16,6 +16,7 @@ import TWrong1 from './components/TWrong1';
 import Hint from './components/Hint';
 import Identity from './components/Identity';
 import TWrong2 from './components/TWrong2';
+import Tr1 from './components/Tr1';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="/hint" element={<Hint />}></Route>
           <Route path="/identity" element={<Identity />}></Route>
           <Route path="/tw2" element={<TWrong2 />}></Route>
+          <Route path='/tr1' element={<Tr1 />} />
     </Routes>
     </>
   );

@@ -4,9 +4,9 @@ import { useState } from 'react';
 export default function Trigo() {
     const [route, setRoute] = useState("");
     const handleClick=()=>{
-        if(document.getElementById("answer").value == 2)
+        if(document.getElementById("answer").value === '2')
         {
-            setRoute("/r1");
+            setRoute("/tr1");
         }
         else
         {
@@ -24,6 +24,9 @@ export default function Trigo() {
           
     </header>
     {/*  <section className='mx-5 my-5' style={{textAlign: 'center', marginLeft: '200px'}}>
+=======
+    {/* <section className='mx-5 my-5' style={{textAlign: 'center', marginLeft: '200px'}}>
+
         <table style={{borderWidth: '2px', borderColor: 'black', width: '200px', height: '100px'}}> 
             <tr style={{borderWidth: '2px', borderColor: 'black'}}>
                 <td style={{borderWidth: '2px', borderColor: 'black'}}>sin</td>
@@ -36,9 +39,10 @@ export default function Trigo() {
                 <td style={{borderWidth: '2px', borderColor: 'black'}}>cot</td>
             </tr>
         </table>
-    </section>
-     */}
-     <section>
+<
+=======
+    </section> */}
+    <section>
     <form action="/">
                 <label htmlFor="noofterms" className='my-3 mx-2'>
                    

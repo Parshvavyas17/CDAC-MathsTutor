@@ -112,7 +112,7 @@ export default function WrongP1() {
 
 
 
-                
+
            <a href='w3'> <button className='btn btn-outline-success my-3 mx-10' style={{height: '75px', width: '100px',borderRadius: '50%', textAlign: 'center', marginLeft: '25px'}} onClick = {handleSubmit}>Next</button></a>
 
 
