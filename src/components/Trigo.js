@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 export default function Trigo() {
   const [route, setRoute] = useState("");
   const handleClick = () => {
-    if (document.getElementById("answer").value === "2") {
+    if (document.getElementById("answer").value === "1.5707") {
       setRoute("/tr1");
     } else {
       setRoute("/tw1");
@@ -71,13 +71,13 @@ export default function Trigo() {
                 <input className= "" style={{width: '50px',marginLeft: '10px', marginRight: '2px'}} type="number" />
                 <input className= "" style={{width: '50px',marginLeft: '10px', marginRight: '2px'}} type="number" />
                 <sup><input type="number" style={{width: '40px'}}/></sup> */}
-          sin x + 2cos x
+           2cos <sup>2</sup>x + sec <sup>2</sup>x
           <br />
           <label htmlFor="noofterms" className="my-3 mx-2">
             The Upper Limit is :
           </label>
           {/* <input className= "mx-5" style={{width: '50px'}} type="number" /> */}
-          {Math.PI}
+          {Math.PI/2}
           <br />
           <label htmlFor="noofterms" className="my-3 mx-2">
             The lower limit is :

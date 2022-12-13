@@ -92,7 +92,8 @@ export default function TWrong1() {
           value={upCo1}
           onChange={handleUpCo1}
         />
-        <form>
+
+        
        <select name="func" id="func">
         <option val = "Sin">Sin</option>
         <option val = "Cos">cos</option>
@@ -107,11 +108,28 @@ export default function TWrong1() {
         <option val = "-sec">-sec</option>
         <option val = "-cot">-cot</option>
 
-        
+   
+<input
+          className=""
+          style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
+          type="number"
+          name="upCo2"
+          value={upCo2}
+          onChange={handleUpCo2}
+        />
+     
 
 
        </select>
         <input
+          className=""
+          style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
+          type="number"
+          name="upCo2"
+          value={upCo2}
+          onChange={handleUpCo2}
+        />
+              <input
           className=""
           style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
           type="number"
@@ -134,8 +152,15 @@ export default function TWrong1() {
         <option val = "-cot">-cot</option>
          
          </select>
-         </form>
-     
+         <input
+          className=""
+          style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
+          type="number"
+          name="upCo2"
+          value={upCo2}
+          onChange={handleUpCo2}
+        />
+   
       </h5>
       <button
         className="btn btn-outline-success my-3 mx-10"
@@ -153,8 +178,6 @@ export default function TWrong1() {
       >
         Submit
       </button>
-      
-      
      
 <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Click here for Hint
@@ -171,7 +194,7 @@ export default function TWrong1() {
         </button>
       </div>
       <div class="modal-body">
-        The two formulas below need to be considered : 
+        The Trigonometric Expansion of cos<sup>2</sup>x has to be done as it cannot be directly 
         <ol>
     <li>  ∫sin x dx = -cos x + C</li>
       <br></br>
