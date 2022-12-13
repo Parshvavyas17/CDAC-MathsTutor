@@ -74,13 +74,13 @@ export default function Trigo() {
           sin x + 2cos x
           <br />
           <label htmlFor="noofterms" className="my-3 mx-2">
-            Enter the Upper Limit:
+            The Upper Limit is :
           </label>
           {/* <input className= "mx-5" style={{width: '50px'}} type="number" /> */}
           {Math.PI}
           <br />
           <label htmlFor="noofterms" className="my-3 mx-2">
-            Enter the Lower Limit:
+            The lower limit is :
           </label>
           {/* <input className= "mx-5" style={{width: '50px'}} type="number" /> */}
           0

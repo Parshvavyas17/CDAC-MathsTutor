@@ -20,16 +20,20 @@ export default function TWrong1() {
       alert("Enter all the values!");
       return;
     }
-    console.log(upCo1, upCo2);
-    if (upCo1 === "-1" && upCo2 === "2") {
-      alert("Right Answer!!!");
-      navigator("/tr1");
-    } else {
-      alert("Wrong Answer!!!");
+
+    if (func==-cos && func1==Sin && upCo1 == "-1" && upCo2 == "2") {
+      alert("Right Answer")
+      
+     } 
+     else 
+     {
+      alert("Wrong Answer")
       setUpCo1("");
       setUpCo2("");
       navigator("/tw2");
-    }
+      
+     }
+ 
   };
 
   const handleHint = (e) => {
@@ -79,16 +83,34 @@ export default function TWrong1() {
             <h3>Integrated Equation: </h3> 
             {/* <h5>-cos x + 2sin x</h5> */}
       <h5 className="my-5 mx-5">
-        Substitute Here: (
+        Substitute Here: 
         <input
           className=""
-          style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
+          style={{ width: "50px", marginLeft: "10px", marginRight: "2px"}}
           type="number"
           name="upCo1"
           value={upCo1}
           onChange={handleUpCo1}
         />
-        cos x +
+        <form>
+       <select name="func" id="func">
+        <option val = "Sin">Sin</option>
+        <option val = "Cos">cos</option>
+        <option val = "Tan">tan</option>
+        <option val = "cosec">cosec</option>
+        <option val = "sec">sec</option>
+        <option val = "cot">cot</option>
+        <option val = "-Sin">-Sin</option>
+        <option val = "-Cos">-cos</option>
+        <option val = "-Tan">-tan</option>
+        <option val = "-cosec">-cosec</option>
+        <option val = "-sec">-sec</option>
+        <option val = "-cot">-cot</option>
+
+        
+
+
+       </select>
         <input
           className=""
           style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
@@ -97,7 +119,23 @@ export default function TWrong1() {
           value={upCo2}
           onChange={handleUpCo2}
         />
-        sin x )
+        <select name="func1" id="func1">
+        <option val = "Sin">Sin</option>
+        <option val = "Cos">cos</option>
+        <option val = "Tan">tan</option>
+        <option val = "cosec">cosec</option>
+        <option val = "sec">sec</option>
+        <option val = "cot">cot</option>
+        <option val = "-Sin">-Sin</option>
+        <option val = "-Cos">-cos</option>
+        <option val = "-Tan">-tan</option>
+        <option val = "-cosec">-cosec</option>
+        <option val = "-sec">-sec</option>
+        <option val = "-cot">-cot</option>
+         
+         </select>
+         </form>
+     
       </h5>
       <button
         className="btn btn-outline-success my-3 mx-10"
@@ -115,22 +153,38 @@ export default function TWrong1() {
       >
         Submit
       </button>
-      <button
-        className="btn btn-outline-success my-3 mx-10"
-        onClick={handleHint}
-        style={{
-          height: "75px",
-          width: "100px",
-          borderRadius: "50%",
-          textAlign: "center",
-          marginLeft: "25px",
-          backgroundColor: "#548CFF",
-          border: "1px solid black",
-          color: "white",
-        }}
-      >
-        View Hint
-      </button>
+      
+      
+     
+<button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Click here for Hint
+</button>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Hint - 1 </h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        The two formulas below need to be considered : 
+        <ol>
+    <li>  ∫sin x dx = -cos x + C</li>
+      <br></br>
+     <li> ∫cos x dx = sin x + C</li>
+      </ol>
+      </div>
+      <div class="modal-footer">
+     {/*   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>  */}
+        <button type="button" class="btn btn-dark"  data-bs-dismiss = "modal">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
     </>
   );
 }
