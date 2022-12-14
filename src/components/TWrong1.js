@@ -50,7 +50,7 @@ export default function TWrong1() {
       return;
     }
 
-    if (upCo1=="1" && upCo2=="x" && upCo3=="0.5" && upCo4=="2x") {
+    if (upCo1=="1" && upCo2=="1" && upCo3=="0.5" && upCo4=="2") {
       alert("Right Answer")
       navigator("/tr1")
       
