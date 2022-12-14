@@ -14,6 +14,15 @@ export default function TWrong1() {
     setUpCo2(e.target.value);
   };
 
+  const [upCo3, setUpCo3] = useState(null);
+  const handleUpCo3 = (e) => {
+    setUpCo2(e.target.value);
+  };
+
+    const [upCo4, setUpCo4] = useState(null);
+  const handleUpCo4 = (e) => {
+    setUpCo2(e.target.value);
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!upCo1 || !upCo2) {
@@ -126,16 +135,16 @@ export default function TWrong1() {
           style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
           type="number"
           name="upCo2"
-          value={upCo2}
-          onChange={handleUpCo2}
+          value={upCo3}
+          onChange={handleUpCo3}
         />
               <input
           className=""
           style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
           type="number"
           name="upCo2"
-          value={upCo2}
-          onChange={handleUpCo2}
+          value={upCo4}
+          onChange={handleUpCo4}
         />
         <select name="func1" id="func1">
         <option val = "Sin">Sin</option>
@@ -157,8 +166,8 @@ export default function TWrong1() {
           style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
           type="number"
           name="upCo2"
-          value={upCo2}
-          onChange={handleUpCo2}
+          value={upCo4}
+          onChange={handleUpCo4}
         />
    
       </h5>
@@ -194,12 +203,7 @@ export default function TWrong1() {
         </button>
       </div>
       <div class="modal-body">
-        The Trigonometric Expansion of cos<sup>2</sup>x has to be done as it cannot be directly 
-        <ol>
-    <li>  ∫sin x dx = -cos x + C</li>
-      <br></br>
-     <li> ∫cos x dx = sin x + C</li>
-      </ol>
+      <b>  Since cos x cannot be directly integrated we need to Use the formula for Expansion of cos x .</b>
       </div>
       <div class="modal-footer">
      {/*   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>  */}
