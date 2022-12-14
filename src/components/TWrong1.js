@@ -4,23 +4,33 @@ import Navbar from "./Navbar";
 
 export default function TWrong1() {
   const navigator = useNavigate();
+  const options = ["none", "sin", "cos", "tan", "cot", "sec", "cosec"];
+
 
   const [trig1, setTrig1] = useState(null);
-  const handletrig1 = (e) => {
-    // setTrig1(e.target.value);
-    var select1 = document.getElementById('func');
-    var value1 = select1.options[select1.selectedIndex].value;
-    setTrig1(value1);
+  // var trig1;
+  // var trig2;
+  // const handletrig1 = (e) => {
+  //   // setTrig1(e.target.value);
+  //   var select1 = document.getElementById('func');
+  //   var value1 = select1.options[select1.selectedIndex].value;
+  //   // setTrig1(value1);
+  //   trig1=value1;
+  //   // console.log(value1);
+  //   console.log(trig1);
 
-    // setTrig1(document.getElementById("func").val);
-  }
+  //   // setTrig1(document.getElementById("func").val);
+  // }
   const [trig2, setTrig2] = useState(null);
-  const handletrig2 = (e) => {
-    var select2 = document.getElementById('func1');
-    var value2 = select2.options[select2.selectedIndex].value;
-    setTrig2(value2);
-    // setTrig2(document.getElementById("func1").val);
-  }
+  // const handletrig2 = (e) => {
+  //   var select2 = document.getElementById('func1');
+  //   var value2 = select2.options[select2.selectedIndex].value;
+  //   // setTrig2(value2);
+  //   trig2=value2;
+  //   // console.log(value2);
+  //   console.log(trig2);
+  //   // setTrig2(document.getElementById("func1").val);
+  // }
   const [upCo1, setUpCo1] = useState(null);
   const handleUpCo1 = (e) => {
     setUpCo1(e.target.value);
@@ -50,7 +60,9 @@ export default function TWrong1() {
       return;
     }
 
-    if (upCo1=="1" && upCo2=="x" && upCo3=="0.5" && upCo4=="2x") {
+    console.log(trig1);
+    console.log(trig2);
+    if (upCo1=="1" && trig1 == "none" && upCo2=="x" && upCo3=="0.5"&& trig2=="sin" && upCo4=="2x") {
       alert("Right Answer")
       navigator("/tr1")
       
@@ -124,7 +136,8 @@ export default function TWrong1() {
         />
 
         
-       <select name="func" id="func" onChange={handletrig1}>
+       {/* <select name="func" id="func" onChange={handletrig1}>
+        <option disbaled selected >Select an option</option> 
         <option value = "none">none</option>
         <option value = "sin">sin</option>
         <option value = "cos">cos</option>
@@ -137,7 +150,15 @@ export default function TWrong1() {
         <option value = "-tan">-tan</option>
         <option value = "-cosec">-cosec</option>
         <option value = "-sec">-sec</option>
-        <option value = "-cot">-cot</option>
+        <option value = "-cot">-cot</option> */}
+        <select value={trig1} onChange={(e)=>setTrig1(e.target.value)} >
+          <option disabled selected>Select an option</option>
+          {options.map((value) => 
+          (<option value={value} key = {value}>
+            {value}
+          </option>  
+        ))}
+        </select>
         
 
    
@@ -152,7 +173,7 @@ export default function TWrong1() {
      
 
 
-       </select>
+       {/* </select> */}
         <input
           className=""
           style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
@@ -169,7 +190,8 @@ export default function TWrong1() {
           value={upCo3}
           onChange={handleUpCo3}
         />
-        <select name="func1" id="func1" onChange={handletrig2}>
+        {/* <select name="func1" id="func1" onChange={handletrig2}>
+        <option disbaled selected >Select an option</option>
         <option value = "none">none</option>
         <option value = "sin">sin</option>
         <option value = "cos">cos</option>
@@ -184,7 +206,15 @@ export default function TWrong1() {
         <option value = "-sec">-sec</option>
         <option value = "-cot">-cot</option>
          
-         </select>
+         </select> */}
+         <select value={trig2} onChange={(e)=>setTrig2(e.target.value)} >
+         <option disabled selected>Select an option</option>
+          {options.map((value) => 
+          (<option value={value} key = {value}>
+            {value}
+          </option>  
+        ))}
+        </select>
          <input
           className=""
           style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
