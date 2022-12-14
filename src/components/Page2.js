@@ -11,7 +11,7 @@ export default function Page2() {
               <a href="/Polynomial"><button className='btn btn-primary btn-lg my-3' style={{width: '250px'}}>Polynomial Equation</button></a><br />
               <a href="/trigo"><button className='btn btn-primary btn-lg my-3' style={{width: '250px'}}>Trigonometric Equation</button></a><br />
               <a href='/loga'><button className='btn btn-primary btn-lg my-3' style={{width: '250px'}}>Logarithmic Equation</button></a><br />
-              <button className='btn btn-primary btn-lg my-3' style={{width: '250px'}}>Exponential Equation</button><br />
+              <a href='/expo'><button className='btn btn-primary btn-lg my-3' style={{width: '250px'}}>Exponential Equation</button></a><br />
           </div>
       </div>
     </>
