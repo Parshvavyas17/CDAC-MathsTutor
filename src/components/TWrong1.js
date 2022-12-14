@@ -65,7 +65,7 @@ export default function TWrong1() {
     if (upCo1=="1" && trig1 == "none" && upCo2=="x" && upCo3=="0.5"&& trig2=="sin" && upCo4=="2x") {
   
       alert("Right Answer")
-      navigator("/tw2")
+      navigator("/tw3")
       
      } 
      else 
@@ -73,7 +73,7 @@ export default function TWrong1() {
       alert("Wrong Answer")
       setUpCo1("");
       setUpCo2("");
-      navigator("/tw3");
+      navigator("/tw2");
       
      }
  
