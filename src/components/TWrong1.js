@@ -5,6 +5,22 @@ import Navbar from "./Navbar";
 export default function TWrong1() {
   const navigator = useNavigate();
 
+  const [trig1, setTrig1] = useState(null);
+  const handletrig1 = (e) => {
+    // setTrig1(e.target.value);
+    var select1 = document.getElementById('func');
+    var value1 = select1.options[select1.selectedIndex].value;
+    setTrig1(value1);
+
+    // setTrig1(document.getElementById("func").val);
+  }
+  const [trig2, setTrig2] = useState(null);
+  const handletrig2 = (e) => {
+    var select2 = document.getElementById('func1');
+    var value2 = select2.options[select2.selectedIndex].value;
+    setTrig2(value2);
+    // setTrig2(document.getElementById("func1").val);
+  }
   const [upCo1, setUpCo1] = useState(null);
   const handleUpCo1 = (e) => {
     setUpCo1(e.target.value);
@@ -16,13 +32,17 @@ export default function TWrong1() {
 
   const [upCo3, setUpCo3] = useState(null);
   const handleUpCo3 = (e) => {
-    setUpCo2(e.target.value);
+    setUpCo3(e.target.value);
   };
 
     const [upCo4, setUpCo4] = useState(null);
   const handleUpCo4 = (e) => {
-    setUpCo2(e.target.value);
+    setUpCo4(e.target.value);
   };
+  // const [upCo5, setUpCo5] = useState(null);
+  // const handleUpCo5 = (e) => {
+  //   setUpCo2(e.target.value);
+  // };
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!upCo1 || !upCo2) {
@@ -30,8 +50,9 @@ export default function TWrong1() {
       return;
     }
 
-    if (func==-cos && func1==Sin && upCo1 == "-1" && upCo2 == "2") {
+    if (upCo1=="1" && upCo2=="x" && upCo3=="0.5" && upCo4=="2x") {
       alert("Right Answer")
+      navigator("/tr1")
       
      } 
      else 
@@ -96,36 +117,38 @@ export default function TWrong1() {
         <input
           className=""
           style={{ width: "50px", marginLeft: "10px", marginRight: "2px"}}
-          type="number"
+          type="text"
           name="upCo1"
           value={upCo1}
           onChange={handleUpCo1}
         />
 
         
-       <select name="func" id="func">
-        <option val = "Sin">Sin</option>
-        <option val = "Cos">cos</option>
-        <option val = "Tan">tan</option>
-        <option val = "cosec">cosec</option>
-        <option val = "sec">sec</option>
-        <option val = "cot">cot</option>
-        <option val = "-Sin">-Sin</option>
-        <option val = "-Cos">-cos</option>
-        <option val = "-Tan">-tan</option>
-        <option val = "-cosec">-cosec</option>
-        <option val = "-sec">-sec</option>
-        <option val = "-cot">-cot</option>
+       <select name="func" id="func" onChange={handletrig1}>
+        <option value = "none">none</option>
+        <option value = "sin">sin</option>
+        <option value = "cos">cos</option>
+        <option value = "tan">tan</option>
+        <option value = "cosec">cosec</option>
+        <option value = "sec">sec</option>
+        <option value = "cot">cot</option>
+        <option value = "-sin">-Sin</option>
+        <option value = "-cos">-cos</option>
+        <option value = "-tan">-tan</option>
+        <option value = "-cosec">-cosec</option>
+        <option value = "-sec">-sec</option>
+        <option value = "-cot">-cot</option>
+        
 
    
-<input
+{/* <input
           className=""
           style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
           type="number"
           name="upCo2"
           value={upCo2}
           onChange={handleUpCo2}
-        />
+        /> */}
      
 
 
@@ -133,39 +156,40 @@ export default function TWrong1() {
         <input
           className=""
           style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
-          type="number"
+          type="text"
           name="upCo2"
-          value={upCo3}
-          onChange={handleUpCo3}
+          value={upCo2}
+          onChange={handleUpCo2}
         />
               <input
           className=""
           style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
-          type="number"
-          name="upCo2"
-          value={upCo4}
-          onChange={handleUpCo4}
+          type="text"
+          name="upCo3"
+          value={upCo3}
+          onChange={handleUpCo3}
         />
-        <select name="func1" id="func1">
-        <option val = "Sin">Sin</option>
-        <option val = "Cos">cos</option>
-        <option val = "Tan">tan</option>
-        <option val = "cosec">cosec</option>
-        <option val = "sec">sec</option>
-        <option val = "cot">cot</option>
-        <option val = "-Sin">-Sin</option>
-        <option val = "-Cos">-cos</option>
-        <option val = "-Tan">-tan</option>
-        <option val = "-cosec">-cosec</option>
-        <option val = "-sec">-sec</option>
-        <option val = "-cot">-cot</option>
+        <select name="func1" id="func1" onChange={handletrig2}>
+        <option value = "none">none</option>
+        <option value = "sin">sin</option>
+        <option value = "cos">cos</option>
+        <option value = "tan">tan</option>
+        <option value = "cosec">cosec</option>
+        <option value = "sec">sec</option>
+        <option value = "cot">cot</option>
+        <option value = "-sin">-sin</option>
+        <option value = "-cos">-cos</option>
+        <option value = "-tan">-tan</option>
+        <option value = "-cosec">-cosec</option>
+        <option value = "-sec">-sec</option>
+        <option value = "-cot">-cot</option>
          
          </select>
          <input
           className=""
           style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
-          type="number"
-          name="upCo2"
+          type="text"
+          name="upCo4"
           value={upCo4}
           onChange={handleUpCo4}
         />
