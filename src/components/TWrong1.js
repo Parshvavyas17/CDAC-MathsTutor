@@ -258,7 +258,7 @@ export default function TWrong1() {
         </button>
       </div>
       <div class="modal-body">
-      <b>  Since cos x cannot be directly integrated we need to Use the formula for Expansion of cos x .</b>
+      <b>  Since cos<sup>2</sup>x cannot be directly integrated we need to Use the formula for Expansion of cos x .</b>
       </div>
       <div class="modal-footer">
      {/*   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>  */}
