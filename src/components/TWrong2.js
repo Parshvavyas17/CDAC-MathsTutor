@@ -122,6 +122,7 @@ export default function TWrong2() {
           <li>Now , ∫cos(nx)dx = sin(nx)/n .... In this case n = 2
 
 </li>
+<li>Since 1 is a constant... The integral of 1 is x</li>
 
 <li>∫sec<sup>2</sup>x dx = tanx+C</li>
         </ol>
