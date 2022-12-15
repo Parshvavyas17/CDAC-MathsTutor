@@ -18,6 +18,14 @@ import Identity from "./components/Identity";
 import TWrong2 from "./components/TWrong2";
 import Tr1 from "./components/Tr1";
 import TWrong3 from "./components/TWrong3";
+import Loga from "./Loga";
+import Lw1 from "./components/Lw1";
+import Lw2 from "./components/Lw2";
+import Lw3 from "./components/Lw3";
+import Expo from "./components/Expo";
+import Ew1 from "./components/Ew1";
+import Ew2 from "./components/Ew2";
+import Ew3 from "./components/Ew3";
 
 function App() {
   return (
@@ -39,6 +47,15 @@ function App() {
         <Route path="/tw2" element={<TWrong2 />}></Route>
         <Route path="/tr1" element={<Tr1 />} />
         <Route path="/tw3" element={<TWrong3 />} />
+        <Route path="loga" element={<Loga />} />
+        {/* <Route path="/lr1" element={<Lr1 />} /> */}
+        <Route path="lw1" element={<Lw1 />} />
+        <Route path="lw2" element={<Lw2 />} />
+        <Route path="lw3" element={<Lw3 />} />
+        <Route path="expo" element={<Expo />} />
+        <Route path="ew1" element={<Ew1 />} />
+        <Route path="ew2" element={<Ew2 />} />
+        <Route path="ew3" element={<Ew3 />} />
       </Routes>
     </>
   );
