@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 const Loga = () => {
     const [route, setRoute] = useState("");
     const handleClick = () => {
-      if (document.getElementById("answer").value == "1") {
+      if (document.getElementById("answer").value == "1.57") {
         alert("Right Answer!")
         setRoute("/tr1");
       } else {
@@ -73,13 +73,13 @@ const Loga = () => {
                   <input className= "" style={{width: '50px',marginLeft: '10px', marginRight: '2px'}} type="number" />
                   <input className= "" style={{width: '50px',marginLeft: '10px', marginRight: '2px'}} type="number" />
                   <sup><input type="number" style={{width: '40px'}}/></sup> */}
-             log x
+             ln(2x) dx
             <br />
             <label htmlFor="noofterms" className="my-3 mx-2">
               The Upper Limit is :
             </label>
             {/* <input className= "mx-5" style={{width: '50px'}} type="number" /> */}
-            {Math.exp(1)};
+            {Math.exp(1)} (e) ;
             <br />
             <label htmlFor="noofterms" className="my-3 mx-2">
               The lower limit is :

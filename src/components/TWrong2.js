@@ -139,7 +139,7 @@ export default function TWrong2() {
 
 <br></br>
         
-        <a href="/trigo">
+        <a href="/">
           <button
             className="btn btn-outline-success my-3 mx-10"
             style={{

@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 
 const Lw3 = () => {
     const navigator = useNavigate();
-    const options = ["none", "log"];
+    const options = ["none", "log","ln"];
     const [trig1, setTrig1] = useState(null);
     const [trig2, setTrig2] = useState(null);
     const [trig3, setTrig3] = useState(null);
@@ -53,7 +53,7 @@ const Lw3 = () => {
     
         console.log(trig1);
         console.log(trig2);
-        if (upCo1=="2.718" && trig1 == "log" && upCo2=="2.718" && upCo3=="-1" && trig2=="none" && upCo4=="2.718" && upCo5=="1" && trig3=="log" && upCo6=="1" && upCo7=="-1" && trig4=="none" && upCo8=="1") {
+        if (upCo1=="2.718" && trig1 == "ln" && upCo2=="5.436" && upCo3=="0" && trig2=="none" && upCo4=="0" && upCo5=="-2.718" && trig3=="none" && upCo6=="0" && upCo7=="0" && trig4=="none" && upCo8=="0") {
       
           alert("Right Answer")
           navigator("/loga")
@@ -83,7 +83,7 @@ const Lw3 = () => {
         <section>
           <h5 className="my-5 mx-5"></h5>
           <h5 className="my-5 mx-5">
-            In this case f(x) = log x and b (upperlimit) = {Math.exp(1)} and a
+            In this case f(x) = log x and b (upperlimit) = {Math.exp(1)} (e) and a
             (lowerlimit)=1
           </h5>
           <h5 className="my-5">
@@ -245,11 +245,15 @@ const Lw3 = () => {
                   ></button>
                 </div>
                 <div class="modal-body">
-                  Formula to be applied : <sub>b</sub>∫<sup>a</sup> f(x) dx =
+                  <ol>
+               <li>  Formula to be applied : <sub>b</sub>∫<sup>a</sup> f(x) dx =
                   F(b)- F(a) <br></br> Here F(b) is the integrated equation after
                   substituting the upper limit
                   <br></br> Similarly , F(a) is the integrated equation after
-                  substituting the lower limit
+                  substituting the lower limit. </li>
+                  <li>Consider all values till 3 decimal digits (e=2.718)</li> 
+
+                  </ol>
                 </div>
                 <div class="modal-footer">
                   {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}

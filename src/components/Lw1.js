@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 
 const Lw1 = () => {
     const navigator = useNavigate();
-    const options = ["none", "log"];
+    const options = ["none", "log","ln"];
   
   
     const [trig1, setTrig1] = useState(null);
@@ -63,10 +63,10 @@ const Lw1 = () => {
   
       console.log(trig1);
       console.log(trig2);
-      if (upCo1=="x" && trig1 == "log" && upCo2=="x" && upCo3=="-1"&& trig2=="none" && upCo4=="x") {
+      if (upCo1=="x" && trig1 == "ln" && upCo2=="2x" && upCo3=="-x"&& trig2=="none" && upCo4=="0") {
     
         alert("Right Answer")
-        navigator("/lw2")
+        navigator("/lw3")
         
        } 
        else 
@@ -74,7 +74,7 @@ const Lw1 = () => {
         alert("Wrong Answer")
         setUpCo1("");
         setUpCo2("");
-        navigator("/lw3");
+        navigator("/lw2");
         
        }
    
@@ -259,7 +259,10 @@ const Lw1 = () => {
           </button>
         </div>
         <div class="modal-body">
-        <b>  Since cos<sup>2</sup>x cannot be directly integrated we need to Use the formula for Expansion of cos x .</b>
+        <b>Use integration by Parts 
+          <br></br>
+          ∫ln(2x).1
+        </b>
         </div>
         <div class="modal-footer">
        {/*   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>  */}

@@ -33,8 +33,8 @@ const Lw2 = () => {
       <section>
         <h4 className="mx-2 my-3">The equation integrated by you in the previous step is incorrect!!</h4>
         <br />
-        <h4>Consider the below formulas : </h4>
-        <h5> ∫ log x dx  =  xlog x - x </h5>
+        <h4>Consider the below formula for Integral by Parts : </h4>
+        <h5>∫u v dx = u∫v dx  - ∫u' (∫v dx) dx </h5>
        
 <button type="button" class="btn btn-warning" data-bs-toggle="modal"  data-bs-target="#exampleModal">
   Click here for the second Hint
@@ -51,14 +51,13 @@ const Lw2 = () => {
         </button>
       </div>
       <div class="modal-body">
-      In the the first sub-equation , 2 (which is a constant) should
-                  be taken out of the integral.
-                  <br /> <b>Eg - </b> ∫cf(x) dx = c∫f(x) dx ... here c is the
-                  constant.
+     Use the modified formula of Integration by parts : 
+     <br></br>
+     ∫u dv = uv   -  ∫v du ... where u = ln (2x) 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick={enableThirdHint}>Understood</button>
-   <a href="/tw1"><button type="button" class="btn btn-primary">Try Now</button></a>
+   <a href="/lw1"><button type="button" class="btn btn-primary">Try Now</button></a>
       </div>
     </div>
   </div>
@@ -83,7 +82,11 @@ const Lw2 = () => {
       <div class="modal-body">
     
         
-          Apply the formula number 1 to convert cos<sup>2</sup>x to cos2x
+          Let u = ln(2x) 
+          <br></br>
+          Find du/dx for substituting in place of du in the formula stated in Hint-2.
+<br></br>
+        <b>  Note : du/dx is the derivative of the above equation . </b>
         
 
       </div>
@@ -115,17 +118,24 @@ const Lw2 = () => {
       <div class="modal-body">
     
         <ol>
-          <li>Now , ∫cos(nx)dx = sin(nx)/n .... In this case n = 2
+          <li>
+            According to the above formula stated in Hint-1 , dv = 1 dx
+            Now to get the value of v , we need to integrate on both sides .
+            This would give us v = x . 
+            <br></br>
+         <b>   (∫u dv = ∫1 dx)</b>
 
 </li>
 
-<li>∫sec<sup>2</sup>x dx = tanx+C</li>
+<li>Now we have the values of u = ln(2x)
+  v = x  and du = 2/2x dx </li>
+<li>Now substitute these values in the above integration by parts formula seen in Hint-2</li>
         </ol>
 
       </div>
       <div class="modal-footer">
     {/*    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Understood</button>  */}
-   <a href="/tw1"><button type="button" class="btn btn-primary">Try Now</button></a>
+   <a href="/lw1"><button type="button" class="btn btn-primary">Try Now</button></a>
       </div>
     </div>
   </div>
