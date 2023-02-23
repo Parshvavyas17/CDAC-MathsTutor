@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 
 export default function WrongP1() {
   const navigator = useNavigate();
@@ -83,6 +83,7 @@ export default function WrongP1() {
           value={upCo1}
           onChange={handleUpCo1}
         />
+        <span className="m-1 fs-5 fw-bold">x</span>
         <sup>
           <input
             type="number"

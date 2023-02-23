@@ -18,7 +18,7 @@ import Identity from "./components/Identity";
 import TWrong2 from "./components/TWrong2";
 import Tr1 from "./components/Tr1";
 import TWrong3 from "./components/TWrong3";
-import Loga from "./Loga";
+import Loga from "./components//Loga";
 import Lw1 from "./components/Lw1";
 import Lw2 from "./components/Lw2";
 import Lw3 from "./components/Lw3";
