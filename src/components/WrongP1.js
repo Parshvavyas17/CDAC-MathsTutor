@@ -45,7 +45,7 @@ export default function WrongP1() {
       upPo3 == 1
     ) {
       alert("Right Answer!!!");
-      navigator("/r1");
+      navigator("/w2");
     } else {
       alert("Wrong Answer!!!");
       setUpCo1(null);
@@ -54,7 +54,7 @@ export default function WrongP1() {
       setUpPo2(null);
       setUpCo3(null);
       setUpPo3(null);
-      navigator("/w2");
+      navigator("/w3");
     }
   };
 
@@ -183,7 +183,7 @@ export default function WrongP1() {
             </div>
           </div>
         </div>
-        <a href="/w3">
+        <a>
           {" "}
           <button
             className="btn btn-outline-success my-3 mx-10"
