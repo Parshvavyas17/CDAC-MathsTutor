@@ -25,30 +25,44 @@ const Ew3 = () => {
     const handleUpPo2 = (e) => {
       setUpPo2(e.target.value);
     };
+
+
+    const [loCo3, setLoCo3] = useState(null);
+    const handleLoCo3 = (e) => {
+      setLoCo3(e.target.value);
+    };
+
+
+    const [loPo3, setLoPo3] = useState(null);
+    const handleLoPo3 = (e) => {
+      setUpPo2(e.target.value);
+    };
     // const [upPo3, setUpPo3] = useState(null);
     // const handleUpPo3 = (e) => {
     //   setUpPo3(e.target.value);
     // };
-    const [loCo1, setLoCo1] = useState(null);
-    const handleLoCo1 = (e) => {
-      setLoCo1(e.target.value);
-    };
-    const [loCo2, setLoCo2] = useState(null);
-    const handleLoCo2 = (e) => {
-      setLoCo2(e.target.value);
-    };
+
+
     // const [loCo3, setLoCo3] = useState(null);
     // const handleLoCo3 = (e) => {
     //   setLoCo3(e.target.value);
     // };
-    const [loPo1, setLoPo1] = useState(null);
-    const handleLoPo1 = (e) => {
-      setLoPo1(e.target.value);
+
+
+    const [loCo4, setLoCo4] = useState(null);
+    const handleloCo4 = (e) => {
+      setLoCo4(e.target.value);
     };
-    const [loPo2, setLoPo2] = useState(null);
-    const handleLoPo2 = (e) => {
-      setLoPo2(e.target.value);
+
+    const [loPo4, setLoPo4] = useState(null);
+    const handleLoPo4 = (e) => {
+      setLoPo4(e.target.value);
     };
+
+
+
+
+
     // const [loPo3, setLoPo3] = useState(null);
     // const handleLoPo3 = (e) => {
     //   setLoPo3(e.target.value);
@@ -60,10 +74,13 @@ const Ew3 = () => {
         !upCo2 ||
         !upPo1 ||
         !upPo2 ||
-        !loCo1 ||
-        !loCo2 ||
-        !loPo1 ||
-        !loPo2 
+
+        !loCo3 ||
+        !loCo4 ||
+        !loPo3 || 
+        !loPo4
+        
+        
       ) {
         alert("Enter all the values!");
         return;
@@ -73,20 +90,24 @@ const Ew3 = () => {
         upPo1,
         upCo2,
         upPo2,
-        loCo1,
-        loPo1,
-        loCo2,
-        loPo2
+
+        loCo3,
+        loPo3,
+        loCo4,
+        loPo4, 
+        
       );
       if (
-        upCo1 == "e" &&
-        upPo1 == "ln 2" &&
-        upCo2 == "0" &&
-        upPo2 == "0" &&
-        loCo1 == "e" &&
-        loPo1 == "0" &&
-        loCo2 == "0" &&
-        loPo2 == "0"
+        upCo1 == "0.67" &&
+        upCo2 == "e" &&
+        upPo1 == "0" &&
+        upPo2 == "0.67" &&
+
+
+        loCo3 == "0.67" &&
+        loCo4 == "e" &&
+        loPo3 == "ln(3/2)" &&
+        loPo4 ==  "0.67"
       ) {
         alert("Right Answer!!!");
         navigator("/expo");
@@ -98,13 +119,13 @@ const Ew3 = () => {
         setUpPo2(null);
         // setUpCo3(null);
         // setUpPo3(null);
-        setLoCo1(null);
-        setLoPo1(null);
-        setLoCo2(null);
-        setLoPo2(null);
+        setLoCo3(null);
+        setLoPo3(null);
+        setLoCo4(null);
+        setLoPo4(null);
         // setLoCo3(null);
         // setLoPo3(null);
-        navigator("/ew2");
+        navigator("/ew3");
       }
     };
   
@@ -121,46 +142,55 @@ const Ew3 = () => {
         <section>
           <h5 className="my-5 mx-5"></h5>
           <h5 className="my-5 mx-5">
-            In this case f(x) = 3x <sup>2</sup> -2x+5 and b (upperlimit) = 2 and a
-            (lowerlimit)=1
+            In this     Question  f(x) =  ∫e<sup>x</sup>(1+e<sup>x</sup>) <sup>1/2</sup> dx.
           </h5>
           <h5 className="my-5 mx-5">
             Substitute Here: (
-            <input
-              className=""
-              style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
-              type="text"
-              name="upCo1"
-              value={upCo1}
-              onChange={handleUpCo1}
-            />
-            <sup>
               <input
-                type="text"
-                style={{ width: "40px" }}
-                name="upPo1"
-                value={upPo1}
-                onChange={handleUpPo1}
-              />
-            </sup>
-            +
+            className=""
+            style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
+            type="text"
+            name="upCo1"
+            value={upCo1}
+            onChange={handleUpCo1}
+          />
+
+   
+    <text> ( </text>
+         1 +
+          <input
+            className=""
+            style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
+            type="text"
+            name="upCo2"
+            value={upCo2}
+            onChange={handleUpCo2}
+          />
+
+    
+          <sup>
             <input
-              className=""
-              style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
               type="text"
-              name="upCo2"
-              value={upCo2}
-              onChange={handleUpCo2}
+              style={{ width: "40px" }}
+              name="upPo1"   
+              value={upPo1}
+              onChange={handleUpPo1}
             />
-            <sup>
-              <input
-                type="text"
-                style={{ width: "40px" }}
-                name="upPo2"
-                value={upPo2}
-                onChange={handleUpPo2}
-              />
-            </sup>
+          </sup>
+          )
+
+          <sup>
+            <input
+              type="text"
+              style={{ width: "40px" }}
+              name="upPo2"
+              value={upPo2}
+              onChange={handleUpPo2}
+            />
+          </sup>
+          
+
+       
             
             {/* <input
               className=""
@@ -180,42 +210,49 @@ const Ew3 = () => {
               />
             </sup> */}
             ) - (
-            <input
-              className=""
-              style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
-              type="text"
-              name="loCo1"
-              value={loCo1}
-              onChange={handleLoCo1}
-            />
-            <sup>
               <input
-                type="text"
-                style={{ width: "40px" }}
-                name="loPo1"
-                value={loPo1}
-                onChange={handleLoPo1}
-              />
-            </sup>
-            +
+            className=""
+            style={{ width: "50px", marginLeft: "0px", marginRight: "2px" }}
+            type="text"
+            name="loCo3"
+            value={loCo3}
+            onChange={handleLoCo3}
+          />
+
+   
+    <text> ( </text>
+         1 +
+          <input
+            className=""
+            style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
+            type="text"
+            name="loCo4"
+            value={loCo4}
+            onChange={handleloCo4}
+          />
+          <sup>
             <input
-              className=""
-              style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
               type="text"
-              name="loCo2"
-              value={loCo2}
-              onChange={handleLoCo2}
+              style={{ width: "40px" }}
+              name="loPo3"   
+              value={loPo3}
+              onChange={handleLoPo3}
             />
-            <sup>
-              <input
-                type="text"
-                style={{ width: "40px" }}
-                name="loPo2"
-                value={loPo2}
-                onChange={handleLoPo2}
-              />
-            </sup>
-            
+          </sup>
+          )
+
+          <sup>
+            <input
+              type="text"
+              style={{ width: "40px" }}
+              name="loPo4"
+              value={loPo4}
+              onChange={handleLoPo4}
+            />
+          </sup>
+          
+
+          <br />
             {/* +
             <input
               className=""
@@ -289,16 +326,16 @@ const Ew3 = () => {
                 <div class="modal-body">
                   Formula to be applied : <sub>b</sub>∫<sup>a</sup> f(x) dx =
                   F(b)- F(a) <br></br> Here F(b) is the integrated equation after
-                  substituting the upper limit
+                  substituting the upper limit (ln(3/2))
                   <br></br> Similarly , F(a) is the integrated equation after
-                  substituting the lower limit
+                  substituting the lower limit ( 0 )
                 </div>
                 <div class="modal-footer">
                   {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
                   <button
                     type="button"
                     class="btn btn-dark"
-                    data-bs-dismiss="modal"
+                    data-bs-dismiss="modal" 
                   >
                     Understood
                   </button>

@@ -28,13 +28,13 @@ const Ew2 = () => {
               color: "white",
             }}
           >
-            <b>Trigonometric Equation: </b>
+            <b>Exponential Equation </b>
           </h1>
         </header>
         <section>
           <h4 className="mx-2 my-3">The equation integrated by you in the previous step is incorrect!!</h4>
           <br />
-          <h4>Consider the below formulas : </h4>
+          <h4>Consider the below formula : </h4>
           <h5> ∫ e <sup>x</sup> dx  =  e <sup>x</sup> + c </h5>
          
   <button type="button" class="btn btn-warning" data-bs-toggle="modal"  data-bs-target="#exampleModal">
@@ -52,10 +52,9 @@ const Ew2 = () => {
           </button>
         </div>
         <div class="modal-body">
-        In the the first sub-equation , 2 (which is a constant) should
-                    be taken out of the integral.
-                    <br /> <b>Eg - </b> ∫cf(x) dx = c∫f(x) dx ... here c is the
-                    constant.
+        Let 1+e<sup>x</sup> = u 
+        <br></br>
+        Hence , du = e <sup>x</sup>dx
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick={enableThirdHint}>Understood</button>
@@ -83,8 +82,12 @@ const Ew2 = () => {
         </div>
         <div class="modal-body">
       
-          
-            Apply the formula number 1 to convert cos<sup>2</sup>x to cos2x
+          Apply the below formula 
+          <br></br>
+      <b>  ∫ x<sup>n</sup> dx = x<sup>n+1</sup>/n+1 </b>
+
+      where in this case n = 1/2 
+
           
   
         </div>
@@ -115,13 +118,9 @@ const Ew2 = () => {
         </div>
         <div class="modal-body">
       
-          <ol>
-            <li>Now , ∫cos(nx)dx = sin(nx)/n .... In this case n = 2
-  
-  </li>
-  
-  <li>∫sec<sup>2</sup>x dx = tanx+C</li>
-          </ol>
+            
+   Now resubstitute u with 1+e<sup>x</sup>
+
   
         </div>
         <div class="modal-footer">

@@ -26,7 +26,7 @@ const Expo = () => {
               <label className="my-1">
                 {" "}
                 <h5>
-                  e<sup>x</sup>
+                ∫e<sup>x</sup>(1+e<sup>x</sup>) <sup>1/2</sup> dx.
                 </h5>{" "}
               </label>
             </label>
@@ -37,7 +37,7 @@ const Expo = () => {
               The upper limit is :{" "}
               <label className="my-6">
                 {" "}
-                <h5> ln 2 </h5>{" "}
+                <h5> ln (2/3) </h5>{" "}
               </label>
             </label>
             <br />

@@ -13,45 +13,48 @@ const Ew1 = () => {
     const handleUpCo2 = (e) => {
       setUpCo2(e.target.value);
     };
-    // const [upCo3, setUpCo3] = useState(null);
-    // const handleUpCo3 = (e) => {
-    //   setUpCo3(e.target.value);
-    // };
-    const [upPo1, setUpPo1] = useState(null);
-    const handleUpPo1 = (e) => {
-      setUpPo1(e.target.value);
-    };
+   // const [upCo3, setUpCo3] = useState(null);
+   // const handleUpCo3 = (e) => {
+    //  setUpCo3(e.target.value);
+  //  };
+    //const [upPo1, setUpPo1] = useState(null);
+    //const handleUpPo1 = (e) => {
+    //  setUpPo1(e.target.value);
+   // };
     const [upPo2, setUpPo2] = useState(null);
     const handleUpPo2 = (e) => {
       setUpPo2(e.target.value);
     };
-    // const [upPo3, setUpPo3] = useState(null);
-    // const handleUpPo3 = (e) => {
-    //   setUpPo3(e.target.value);
-    // };
+    const [upPo3, setUpPo3] = useState(null);
+     const handleUpPo3 = (e) => {
+       setUpPo3(e.target.value);
+     };
   
     const handleSubmit = (e) => {
-      if (!upCo1 || !upCo2 || !upPo1 || !upPo2) {
+      if (!upCo1 || !upCo2 || !upPo2 || !upPo3) {
         alert("Enter all the values!");
         return;
       }
-      console.log(upCo1, upPo1, upCo2, upPo2);
+      console.log(upCo1, upCo2, upPo2,upPo3);
       if (
-        upCo1 == "e" &&
-        upPo1 == "x" &&
-        upCo2 == "0" &&
-        upPo2 == "0" 
+        upCo1 == "0.67" &&
+        <p>1+</p> , 
+        //upPo1 ==  "" &&
+        upCo2 == "e" &&
+        upPo2 == "1" &&
+        upPo3 == "0.67"
       ) {
         alert("Right Answer!!!");
         navigator("/ew3");
       } else {
         alert("Wrong Answer!!!");
         setUpCo1(null);
-        setUpPo1(null);
+        //setUpPo1(null);
         setUpCo2(null);
         setUpPo2(null);
-        // setUpCo3(null);
-        // setUpPo3(null);
+       // setUpCo3(null);
+        setUpPo3(null);
+        setUpPo3(null);
         navigator("/ew2");
       }
     };
@@ -69,10 +72,10 @@ const Ew1 = () => {
         <section className="my-5 mx-4">
           <h3>Exponential Equation displayed to you: </h3>
           <h5>
-            e<sup>x</sup>
+          ∫e<sup>x</sup>(1+e<sup>x</sup>) <sup>1/2</sup> dx.
           </h5>
           <h3>Integrated Equation: </h3>
-          Substitute Here: (
+          Substitute Here: 
           <input
             className=""
             style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
@@ -81,16 +84,10 @@ const Ew1 = () => {
             value={upCo1}
             onChange={handleUpCo1}
           />
-          <sup>
-            <input
-              type="text"
-              style={{ width: "40px" }}
-              name="upPo1"
-              value={upPo1}
-              onChange={handleUpPo1}
-            />
-          </sup>
-          +
+
+   
+    <text> ( </text>
+         1 +
           <input
             className=""
             style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
@@ -103,30 +100,24 @@ const Ew1 = () => {
             <input
               type="text"
               style={{ width: "40px" }}
-              name="upPo2"
+              name="upPo2"   
               value={upPo2}
               onChange={handleUpPo2}
             />
           </sup>
           )
-          {/* <input
-            className=""
-            style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
-            type="number"
-            name="upCo3"
-            value={upCo3}
-            onChange={handleUpCo3}
-          />
+
           <sup>
             <input
-              type="number"
+              type="text"
               style={{ width: "40px" }}
               name="upPo3"
               value={upPo3}
               onChange={handleUpPo3}
             />
           </sup>
-          ) */}
+          
+
           <br />
           <div></div>
           <button
@@ -160,13 +151,13 @@ const Ew1 = () => {
                   ></button>
                 </div>
                 <div class="modal-body">
-                  Formula to be applied :{" "}
-                  <b>
+                  
+                 
                     {" "}
-                    ∫ x<sup>n</sup> dx = x<sup>n+1</sup>/n+1{" "}
-                  </b>
-                  <br></br>where n is the power of the term in the equation to be
-                  integrated
+                    Using Substitution choose  <b>u = 1 + e </b> <sup>x</sup>
+                     
+                 
+                 
                 </div>
                 <div class="modal-footer">
                   {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
