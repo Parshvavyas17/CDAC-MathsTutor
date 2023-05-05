@@ -5,33 +5,33 @@ import Navbar from "./Navbar";
 
 export default function Mw3() {
   const navigator = useNavigate();
-  const [upCo1, setUpCo1] = useState(null);
+  const [upCo1, setUpCo1] = useState("");
   const handleUpCo1 = (e) => {
     setUpCo1(e.target.value);
   };
 
 
-const [upCo2, setUpCo2] = useState(null);
+const [upCo2, setUpCo2] = useState("");
 const handleUpCo2 = (e) => {
   setLoCo2(e.target.value);
 };
 
-  const [upPo1, setUpPo1] = useState(null);
+  const [upPo1, setUpPo1] = useState("");
   const handleUpPo1 = (e) => {
     setUpPo1(e.target.value);
   };
 
 
-  const [loCo1, setLoCo1] = useState(null);
+  const [loCo1, setLoCo1] = useState("");
   const handleLoCo1 = (e) => {
     setLoCo1(e.target.value);
   };
-  const [loCo2, setLoCo2] = useState(null);
+  const [loCo2, setLoCo2] = useState(" ");
   const handleLoCo2 = (e) => {
     setLoCo2(e.target.value);
   };
 
-  const [loPo1, setLoPo1] = useState(null);
+  const [loPo1, setLoPo1] = useState("");
   const handleLoPo1 = (e) => {
     setLoPo1(e.target.value);
   };
@@ -39,16 +39,16 @@ const handleUpCo2 = (e) => {
 
   const handleSubmit = (e) => {
     if (
-      !upCo1 ||
-      !upCo2 ||
-      //!upCo3 ||
-      !upPo1 ||
+      upCo1 == "" ||
+      upCo2 == "" ||
+      //!upCo3 || 
+      upPo1 == "" ||
      // !upPo2 ||
       //!upPo3 ||
-      !loCo1 ||
-      !loCo2 ||
+      loCo1 == "" ||
+      loCo2 == "" ||
       //!loCo3 ||
-      !loPo1 
+      loPo1 == ""
       //!loPo2 
       //!loPo3
     ) {
@@ -57,28 +57,30 @@ const handleUpCo2 = (e) => {
     }
     console.log(
       upCo1,
-      upCo2,
+      
       //upCo3,
       upPo1,
+      upCo2,
       //upPo2,
       //upPo3,
       loCo1,
+      loPo1,
       loCo2,
       //loCo3,
-      loPo1,
+      
      // loPo2,
       //loPo3
     );
     if (
-      upCo1 == 2.71 &&
-      upPo1 == 1 &&
-      upCo2 == 1 &&
+      upCo1 == "2.71" &&
+      upPo1 == "1"&&
+      upCo2 == "1" &&
       //upPo2 == 2 &&
       //upCo3 == 10 &&
       //upPo3 == 1 &&
-      loCo1 == 2.71 &&
-      loPo1 == 0 &&
-      loCo2 == 0
+      loCo1 == "2.71" &&
+      loPo1 == "0"  &&
+      loCo2 == "0"
      // loPo2 == 2 
       //loCo3 == 5 &&
       //loPo3 == 1
@@ -87,7 +89,7 @@ const handleUpCo2 = (e) => {
       navigator("/r1");
     } else {
       alert("Wrong Answer!!!");
-      setUpCo1(null);
+      setUpCo1(null)
       setUpPo1(null);
       setUpCo2(null);
       //setUpPo2(null);
@@ -137,7 +139,8 @@ const handleUpCo2 = (e) => {
               onChange={handleUpPo1}
             />
           </sup>
-          +
+          /
+          (
           <input
             className=""
             style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
@@ -147,6 +150,7 @@ const handleUpCo2 = (e) => {
             onChange={handleUpCo2}
           />
           +1
+          )
 
           ) - (
           <input
@@ -166,8 +170,8 @@ const handleUpCo2 = (e) => {
               onChange={handleLoPo1}
             />
           </sup>
-          +
-          <input
+          /
+        ( <input
             className=""
             style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
             type="number"
@@ -176,6 +180,7 @@ const handleUpCo2 = (e) => {
             onChange={handleLoCo2}
           />
     +1
+        )
 
           )
           <button
