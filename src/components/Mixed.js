@@ -1,22 +1,22 @@
-import React from 'react'
+import React from "react";
 import { useState } from "react";
 import Navbar from "./Navbar";
 
-const Expo = () => {
+export default function Mixed() {
     const [route, setRoute] = useState("");
 
     const handleClick = () => {
-      if (document.getElementById("answer").value == 0.67) {
-        setRoute("/r1");
+      if (document.getElementById("answer").value == 0.355) {
+        setRoute("/");
       } else {
-        setRoute("/ew1");
+        setRoute("mw1/");
       }
     };
     return (
       <>
         <Navbar />
         <h2 className="header">
-          <b className="text">Exponential Equation:</b>
+          <b className="text"> Mixed Type Equation:</b>
         </h2>
         <div className="my-20">
           <form action="/">
@@ -26,7 +26,8 @@ const Expo = () => {
               <label className="my-1">
                 {" "}
                 <h5>
-                ∫e<sup>x</sup>(1+e<sup>x</sup>) <sup>1/2</sup> dx.
+                ∫ x.e<sup>x</sup> / (x+1)<sup>2</sup> dx
+            
                 </h5>{" "}
               </label>
             </label>
@@ -37,7 +38,7 @@ const Expo = () => {
               The upper limit is :{" "}
               <label className="my-6">
                 {" "}
-                <h5> ln (2/3) </h5>{" "}
+                <h5> 1 </h5>{" "}
               </label>
             </label>
             <br />
@@ -61,8 +62,10 @@ const Expo = () => {
               type="number"
               id="answer"
             />
-            <b>Note: Enter the answer upto two decimal places</b>
-            <br />
+            <b>Note 1 : Enter the answer upto two decimal places only .</b>
+            <br/>
+            <b> Note 2 : Consider the value of e as 2.71 only</b>
+            
           </form>
           <a href={route}>
             <button
@@ -82,6 +85,4 @@ const Expo = () => {
         </div>
       </>
     );
-}
-
-export default Expo
+  }

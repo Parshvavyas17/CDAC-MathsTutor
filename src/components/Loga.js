@@ -96,6 +96,7 @@ const Loga = () => {
               type="number"
               id="answer"
             />
+            <b>Note: Enter the answer upto two decimal places</b>
             <br />
           </form>
           <a href={route}>

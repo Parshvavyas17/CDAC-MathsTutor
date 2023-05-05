@@ -63,7 +63,7 @@ const Lw1 = () => {
   
       console.log(trig1);
       console.log(trig2);
-      if (upCo1=="x" && trig1 == "ln" && upCo2=="2x" && upCo3=="-x"&& trig2=="none" && upCo4=="0") {
+      if (upCo1=="1" && trig1 == "ln" && upCo2=="2" && upCo3=="-1"&& trig2=="none" && upCo4=="0") {
     
         alert("Right Answer")
         navigator("/lw3")

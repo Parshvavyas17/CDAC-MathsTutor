@@ -8,6 +8,7 @@ export default function Trigo() {
     if (document.getElementById("answer").value === "1.57") {
       setRoute("/tr1");
     } else {
+      alert("Wrong Answer")
       setRoute("/tw1");
     }
   };
@@ -80,7 +81,7 @@ export default function Trigo() {
           {Math.PI/2}
           <br />
           <label htmlFor="noofterms" className="my-3 mx-2">
-            The lower limit is :
+            The lower limit is : 0
           </label>
           {/* <input className= "mx-5" style={{width: '50px'}} type="number" /> */}
           
@@ -95,6 +96,7 @@ export default function Trigo() {
             type="number"
             id="answer"
           />
+          <b> Note: Enter the answer upto two decimal places </b>
           <br />
         </form>
         <a href={route}>

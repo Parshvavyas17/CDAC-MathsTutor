@@ -12,6 +12,7 @@ export default function Page2() {
               <a href="/trigo"><button className='btn btn-primary btn-lg my-3' style={{width: '250px'}}>Trigonometric Equation</button></a><br />
               <a href='/loga'><button className='btn btn-primary btn-lg my-3' style={{width: '250px'}}>Logarithmic Equation</button></a><br />
               <a href='/expo'><button className='btn btn-primary btn-lg my-3' style={{width: '250px'}}>Exponential Equation</button></a><br />
+              <a href = '/mixed'><button className='btn btn-primary btn-lg my-3' style={{width:'250px'}}>Mixed Type Equations</button></a><br/>
           </div>
       </div>
     </>

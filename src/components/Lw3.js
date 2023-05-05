@@ -53,7 +53,7 @@ const Lw3 = () => {
     
         console.log(trig1);
         console.log(trig2);
-        if (upCo1=="2.718" && trig1 == "ln" && upCo2=="5.436" && upCo3=="0" && trig2=="none" && upCo4=="0" && upCo5=="-2.718" && trig3=="none" && upCo6=="0" && upCo7=="0" && trig4=="none" && upCo8=="0") {
+        if (upCo1=="2.71" && trig1 == "ln" && upCo2=="5.43" && upCo3=="0" && trig2=="none" && upCo4=="0" && upCo5=="-2.71" && trig3=="none" && upCo6=="0" && upCo7=="0" && trig4=="none" && upCo8=="0") {
       
           alert("Right Answer")
           navigator("/loga")

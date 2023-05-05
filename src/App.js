@@ -26,14 +26,18 @@ import Expo from "./components/Expo";
 import Ew1 from "./components/Ew1";
 import Ew2 from "./components/Ew2";
 import Ew3 from "./components/Ew3";
+import Mixed from "./components/Mixed";
+import Mw1 from "./components/Mw1";
+import Mw2 from "./components/Mw2";
+import Mw3 from "./components/Mw3";
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Heading />}></Route>
+        {/* <Route path="/" element={<Heading />}></Route> */}
         <Route path="/Page1" element={<Page1 />}></Route>
-        <Route path="/Page2" element={<Page2 />}></Route>
+        <Route path="/" element={<Page2 />}></Route>
         <Route path="/Polynomial" element={<Polynomial />}></Route>
         <Route path="/w1" element={<WrongP1 />}></Route>
         <Route path="/r1" element={<RightP1 />}></Route>
@@ -56,6 +60,12 @@ function App() {
         <Route path="ew1" element={<Ew1 />} />
         <Route path="ew2" element={<Ew2 />} />
         <Route path="ew3" element={<Ew3 />} />
+        <Route path="/mixed" element = {<Mixed/>} />
+        <Route path="/mw1" element = {<Mw1/>} />
+        <Route path="/mw2" element = {<Mw2/>} />
+        <Route path="/mw3" element = {<Mw3/>} />
+        
+
       </Routes>
     </>
   );

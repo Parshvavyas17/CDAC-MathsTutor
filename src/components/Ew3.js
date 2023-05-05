@@ -35,7 +35,7 @@ const Ew3 = () => {
 
     const [loPo3, setLoPo3] = useState(null);
     const handleLoPo3 = (e) => {
-      setUpPo2(e.target.value);
+      setLoPo3(e.target.value);
     };
     // const [upPo3, setUpPo3] = useState(null);
     // const handleUpPo3 = (e) => {
@@ -50,7 +50,7 @@ const Ew3 = () => {
 
 
     const [loCo4, setLoCo4] = useState(null);
-    const handleloCo4 = (e) => {
+    const handleLoCo4 = (e) => {
       setLoCo4(e.target.value);
     };
 
@@ -74,15 +74,22 @@ const Ew3 = () => {
         !upCo2 ||
         !upPo1 ||
         !upPo2 ||
-
         !loCo3 ||
         !loCo4 ||
         !loPo3 || 
-        !loPo4
-        
-        
+        !loPo4 
       ) {
         alert("Enter all the values!");
+        console.log(
+          upCo1,
+          upPo1,
+          upCo2,
+          upPo2,
+  
+          loCo3,
+          loPo3,
+          loCo4,
+          loPo4);
         return;
       }
       console.log(
@@ -108,8 +115,7 @@ const Ew3 = () => {
         loCo4 == "e" &&
         loPo3 == "ln(3/2)" &&
         loPo4 ==  "0.67"
-      ) {
-        alert("Right Answer!!!");
+      ) {/////////////     alert("Right Answer!!!");
         navigator("/expo");
       } else {
         alert("Wrong Answer!!!");
@@ -125,7 +131,7 @@ const Ew3 = () => {
         setLoPo4(null);
         // setLoCo3(null);
         // setLoPo3(null);
-        navigator("/ew3");
+        navigator("/ew2");
       }
     };
   
@@ -142,7 +148,7 @@ const Ew3 = () => {
         <section>
           <h5 className="my-5 mx-5"></h5>
           <h5 className="my-5 mx-5">
-            In this     Question  f(x) =  ∫e<sup>x</sup>(1+e<sup>x</sup>) <sup>1/2</sup> dx.
+            In this Question  f(x) =  ∫e<sup>x</sup>(1+e<sup>x</sup>) <sup>1/2</sup> dx.
           </h5>
           <h5 className="my-5 mx-5">
             Substitute Here: (
@@ -160,14 +166,12 @@ const Ew3 = () => {
          1 +
           <input
             className=""
-            style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
+            style={{ width: "50px", marginLeft: "10px", marginRight: "" }}
             type="text"
             name="upCo2"
             value={upCo2}
             onChange={handleUpCo2}
-          />
-
-    
+          />    
           <sup>
             <input
               type="text"
@@ -228,7 +232,7 @@ const Ew3 = () => {
             type="text"
             name="loCo4"
             value={loCo4}
-            onChange={handleloCo4}
+            onChange={handleLoCo4}
           />
           <sup>
             <input
@@ -240,7 +244,6 @@ const Ew3 = () => {
             />
           </sup>
           )
-
           <sup>
             <input
               type="text"
@@ -252,7 +255,7 @@ const Ew3 = () => {
           </sup>
           
 
-          <br />
+          
             {/* +
             <input
               className=""
@@ -272,6 +275,8 @@ const Ew3 = () => {
               />
             </sup> */}
             )
+
+            <br />
             <button
               className="btn btn-outline-success my-3 mx-10"
               style={{
