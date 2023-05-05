@@ -125,14 +125,14 @@ const handleUpCo2 = (e) => {
           <input
             className=""
             style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
-            type="number"
+            type="text"
             name="upCo1"
             value={upCo1}
             onChange={handleUpCo1}
           />
           <sup>
             <input
-              type="number"
+              type="text"
               style={{ width: "40px" }}
               name="upPo1"
               value={upPo1}
@@ -144,7 +144,7 @@ const handleUpCo2 = (e) => {
           <input
             className=""
             style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
-            type="number"
+            type="text"
             name="upCo2"
             value={upCo2}
             onChange={handleUpCo2}
@@ -156,14 +156,14 @@ const handleUpCo2 = (e) => {
           <input
             className=""
             style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
-            type="number"
+            type="text"
             name="loCo1"
             value={loCo1}
             onChange={handleLoCo1}
           />
           <sup>
             <input
-              type="number"
+              type="text"
               style={{ width: "40px" }}
               name="loPo1"
               value={loPo1}
@@ -174,7 +174,7 @@ const handleUpCo2 = (e) => {
         ( <input
             className=""
             style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
-            type="number"
+            type="text"
             name="loCo2"
             value={loCo2}
             onChange={handleLoCo2}
