@@ -41,6 +41,11 @@ const Navbar = () => {
                 Exponential
               </Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/mixed">
+                Mixed
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
