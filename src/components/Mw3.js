@@ -13,7 +13,7 @@ export default function Mw3() {
 
 const [upCo2, setUpCo2] = useState("");
 const handleUpCo2 = (e) => {
-  setLoCo2(e.target.value);
+  setUpCo2(e.target.value);
 };
 
   const [upPo1, setUpPo1] = useState("");
@@ -36,6 +36,23 @@ const handleUpCo2 = (e) => {
     setLoPo1(e.target.value);
   };
 
+  console.log(
+      upCo1,
+      
+      //upCo3,
+      upPo1,
+      upCo2,
+      //upPo2,
+      //upPo3,
+      loCo1,
+      loPo1,
+      loCo2,
+      //loCo3,
+      
+     // loPo2,
+      //loPo3
+    );
+
 
   const handleSubmit = (e) => {
     if (
@@ -55,53 +72,38 @@ const handleUpCo2 = (e) => {
       alert("Enter all the values!");
       return;
     }
-    console.log(
-      upCo1,
-      
-      //upCo3,
-      upPo1,
-      upCo2,
-      //upPo2,
-      //upPo3,
-      loCo1,
-      loPo1,
-      loCo2,
-      //loCo3,
-      
-     // loPo2,
-      //loPo3
-    );
+    
     if (
       upCo1 == "2.71" &&
       upPo1 == "1"&&
       upCo2 == "1" &&
-      //upPo2 == 2 &&
-      //upCo3 == 10 &&
-      //upPo3 == 1 &&
       loCo1 == "2.71" &&
       loPo1 == "0"  &&
       loCo2 == "0"
      // loPo2 == 2 
       //loCo3 == 5 &&
       //loPo3 == 1
+      //upPo2 == 2 &&
+      //upCo3 == 10 &&
+      //upPo3 == 1 &&
     ) {
       alert("Right Answer!!!");
       navigator("/r1");
     } else {
       alert("Wrong Answer!!!");
-      setUpCo1(null)
-      setUpPo1(null);
-      setUpCo2(null);
+      setUpCo1("")
+      setUpPo1("");
+      setUpCo2("");
       //setUpPo2(null);
       //setUpCo3(null);
       //setUpPo3(null);
-      setLoCo1(null);
-      setLoPo1(null);
-      setLoCo2(null);
+      setLoCo1("");
+      setLoPo1("");
+      setLoCo2("");
       //setLoPo2(null);
       //setLoCo3(null);
       //setLoPo3(null);
-      navigator("/mw3");
+      navigator("/mw2");
     }
   };
 
@@ -206,7 +208,7 @@ const handleUpCo2 = (e) => {
             <a href="/w3"><button className='btn btn-outline-success my-3 mx-10' style={{height: '75px', width: '100px',borderRadius: '50%', textAlign: 'center', marginLeft: '75px'}}>Wrong</button></a> */}
         <button
           type="button"
-          class="btn btn-warning"
+          className="btn btn-warning"
           data-bs-toggle="modal"
           data-bs-target="#staticBackdrop"
         >
@@ -214,39 +216,39 @@ const handleUpCo2 = (e) => {
         </button>
 
         <div
-          class="modal fade"
+          className="modal fade"
           id="staticBackdrop"
           data-bs-backdrop="static"
           data-bs-keyboard="false"
-          tabindex="-1"
+          tabIndex="-1"
           aria-labelledby="staticBackdropLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h1 className="modal-title fs-5" id="staticBackdropLabel">
                   Hint
                 </h1>
                 <button
                   type="button"
-                  class="btn-close"
+                  className="btn-close"
                   data-bs-dismiss="modal"
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="modal-body">
+              <div className="modal-body">
                 Formula to be applied : <sub>b</sub>∫<sup>a</sup> f(x) dx =
                 F(b)- F(a) <br></br> Here F(b) is the integrated equation after
                 substituting the upper limit
                 <br></br> Similarly , F(a) is the integrated equation after
                 substituting the lower limit
               </div>
-              <div class="modal-footer">
+              <div className="modal-footer">
                 {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
                 <button
                   type="button"
-                  class="btn btn-dark"
+                  className="btn btn-dark"
                   data-bs-dismiss="modal"
                 >
                   Understood
