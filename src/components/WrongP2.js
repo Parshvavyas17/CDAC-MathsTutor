@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 
 export default function WrongP2() {
   const navigator = useNavigate();
+  const location = useLocation();
+  const equation = location.state;
   const [upCo1, setUpCo1] = useState(null);
   const handleUpCo1 = (e) => {
     setUpCo1(e.target.value);
@@ -87,18 +89,18 @@ export default function WrongP2() {
       loPo3
     );
     if (
-      upCo1 == 2 &&
-      upPo1 == 3 &&
-      upCo2 == -2 &&
-      upPo2 == 2 &&
-      upCo3 == 10 &&
-      upPo3 == 1 &&
-      loCo1 == 1 &&
-      loPo1 == 3 &&
-      loCo2 == -1 &&
-      loPo2 == 2 &&
-      loCo3 == 5 &&
-      loPo3 == 1
+      upCo1 === "2" &&
+      upPo1 === "3" &&
+      upCo2 === "-2" &&
+      upPo2 === "2" &&
+      upCo3 === "10" &&
+      upPo3 === "1" &&
+      loCo1 === "1" &&
+      loPo1 === "3" &&
+      loCo2 === "-1" &&
+      loPo2 === "2" &&
+      loCo3 === "5" &&
+      loPo3 === "1"
     ) {
       alert("Right Answer!!!");
       navigator("/r1");
@@ -120,6 +122,8 @@ export default function WrongP2() {
     }
   };
 
+  console.log(equation);
+
   return (
     <>
       <Navbar />
@@ -131,7 +135,6 @@ export default function WrongP2() {
         </h2>
       </header>
       <section>
-        <h5 className="my-5 mx-5"></h5>
         <h5 className="my-5 mx-5">
           In this case f(x) = 3x <sup>2</sup> -2x+5 and b (upperlimit) = 2 and a
           (lowerlimit)=1

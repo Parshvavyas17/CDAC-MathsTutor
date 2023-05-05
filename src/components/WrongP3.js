@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Navbar from "./Navbar";
+import { useLocation } from "react-router-dom";
 
 export default function WrongP3() {
   const [DisSecHint, setDisSecHint] = useState(true);
   const [DisThrdHint, setDisThrdHint] = useState(true);
+  const location = useLocation();
+  const equation = location.state;
 
   const enableSecondHint = () => {
     setDisSecHint(false);
@@ -12,6 +15,8 @@ export default function WrongP3() {
   const enableThirdHint = () => {
     setDisThrdHint(false);
   };
+
+  console.log(equation);
 
   return (
     <>

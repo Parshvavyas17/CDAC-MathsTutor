@@ -1,10 +1,11 @@
-import React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 export default function WrongP1() {
   const navigator = useNavigate();
+  const location = useLocation();
+  const equation = location.state;
   const [upCo1, setUpCo1] = useState(null);
   const handleUpCo1 = (e) => {
     setUpCo1(e.target.value);
@@ -37,15 +38,15 @@ export default function WrongP1() {
     }
     console.log(upCo1, upCo2, upCo3, upPo1, upPo2, upPo3);
     if (
-      upCo1 == 1 &&
-      upPo1 == 3 &&
-      upCo2 == -1 &&
-      upPo2 == 2 &&
-      upCo3 == 5 &&
-      upPo3 == 1
+      upCo1 === "1" &&
+      upPo1 === "3" &&
+      upCo2 === "-1" &&
+      upPo2 === "2" &&
+      upCo3 === "5" &&
+      upPo3 === "1"
     ) {
       alert("Right Answer!!!");
-      navigator("/w2");
+      navigator("/w2", { state: equation });
     } else {
       alert("Wrong Answer!!!");
       setUpCo1(null);
@@ -54,9 +55,11 @@ export default function WrongP1() {
       setUpPo2(null);
       setUpCo3(null);
       setUpPo3(null);
-      navigator("/w3");
+      navigator("/w3", { state: equation });
     }
   };
+
+  console.log(equation);
 
   return (
     <>
@@ -183,23 +186,20 @@ export default function WrongP1() {
               </div>
             </div>
           </div>
-        </div>
-        <a>
-          {" "}
-          <button
-            className="btn btn-outline-success my-3 mx-10"
-            style={{
-              height: "75px",
-              width: "100px",
-              borderRadius: "50%",
-              textAlign: "center",
-              marginLeft: "25px",
-            }}
-            onClick={handleSubmit}
-          >
-            Next
-          </button>
-        </a>
+        </div>{" "}
+        <button
+          className="btn btn-outline-success my-3 mx-10"
+          style={{
+            height: "75px",
+            width: "100px",
+            borderRadius: "50%",
+            textAlign: "center",
+            marginLeft: "25px",
+          }}
+          onClick={handleSubmit}
+        >
+          Next
+        </button>
       </section>
     </>
   );

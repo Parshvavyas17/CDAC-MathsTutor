@@ -1,17 +1,37 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function Polynomial() {
-  const [route, setRoute] = useState("");
+  const [equation, setEquation] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const getEquation = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/api/poly");
+        return response.data.error ? {} : response.data.data;
+      } catch (err) {
+        console.log(err.messsage);
+        return {};
+      }
+    };
+
+    getEquation()
+      .then((data) => setEquation(data))
+      .catch((err) => console.log(err));
+  }, []);
 
   const handleClick = () => {
-    if (document.getElementById("answer").value == 9) {
-      setRoute("/r1");
+    if (document.getElementById("answer").value === "9") {
+      navigate("/r1");
     } else {
-      setRoute("/w1");
+      navigate("/w1", { state: equation });
     }
   };
+
   return (
     <>
       <Navbar />
@@ -64,21 +84,19 @@ export default function Polynomial() {
           <b>Note: Enter the answer upto two decimal places</b>
           <br />
         </form>
-        <a href={route}>
-          <button
-            onClick={handleClick}
-            className="btn btn-outline-success my-3 mx-10"
-            style={{
-              height: "75px",
-              width: "100px",
-              borderRadius: "50%",
-              textAlign: "center",
-              marginLeft: "75px",
-            }}
-          >
-            Submit
-          </button>
-        </a>
+        <button
+          onClick={handleClick}
+          className="btn btn-outline-success my-3 mx-10"
+          style={{
+            height: "75px",
+            width: "100px",
+            borderRadius: "50%",
+            textAlign: "center",
+            marginLeft: "75px",
+          }}
+        >
+          Submit
+        </button>
       </div>
     </>
   );
