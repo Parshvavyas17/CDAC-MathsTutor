@@ -1,11 +1,14 @@
 import React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 
 export default function TWrong2() {
   const [DisThirdHint, setDisSecHint] = useState(true);
   const [DisFourthHint, setDisThrdHint] = useState(true);
+  const location = useLocation();
+  const equation = location.state;
+
   const enableThirdHint = () => {
     setDisSecHint(false);
   };
@@ -13,6 +16,8 @@ export default function TWrong2() {
   const enableFourthHint = () => {
     setDisThrdHint(false);
   };
+
+  console.log(equation);
 
   return (
     <>
@@ -31,114 +36,201 @@ export default function TWrong2() {
         </h1>
       </header>
       <section>
-        <h4 className="mx-2 my-3">The equation integrated by you in the previous step is incorrect!!</h4>
+        <h4 className="mx-2 my-3">
+          The equation integrated by you in the previous step is incorrect!!
+        </h4>
         <br />
         <h4>Consider the below 2 formulas : </h4>
         <ol>
-       <li> <h5>cos 2x = 2cos<sup>2</sup>x - 1</h5></li>
-        <br />
-       <li> <h5>∫ sec<sup>2</sup>x dx = tan x</h5></li>
-        </ol>
-       
-<button type="button" class="btn btn-warning" data-bs-toggle="modal"  data-bs-target="#exampleModal">
-  Click here for the second Hint
-</button>
-
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Hint-2</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      In the the first sub-equation , 2 (which is a constant) should
-                  be taken out of the integral.
-                  <br /> <b>Eg - </b> ∫cf(x) dx = c∫f(x) dx ... here c is the
-                  constant.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onClick={enableThirdHint}>Understood</button>
-   <a href="/tw1"><button type="button" class="btn btn-primary">Try Now</button></a>
-      </div>
-    </div>
-  </div>
-</div>
-<br></br>
-<br></br>
-
-<button type="button" class="btn btn-warning" data-bs-toggle="modal" disabled={DisThirdHint} data-bs-target="#Hint3Modal">
-  Click here for the third Hint
-</button>
-
-
-<div class="modal fade" id="Hint3Modal" tabindex="-1" role="dialog" aria-labelledby="Hint3ModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="Hint3ModalLabel">Hint-3</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-    
-        
-          Apply the formula number 1 to convert cos<sup>2</sup>x to cos2x
-        
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"onClick={enableFourthHint}>Understood</button>
-   <a href="/tw1"><button type="button" class="btn btn-primary">Try Now</button></a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<br></br>
-<br></br>
-
-<button type="button" class="btn btn-warning" data-bs-toggle="modal" disabled={DisFourthHint} data-bs-target="#Hint4Modal">
-  Click here for the fourth Hint
-</button>
-
-
-<div class="modal fade" id="Hint4Modal" tabindex="-1" role="dialog" aria-labelledby="Hint4ModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="Hint4ModalLabel">Hint-4</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-    
-        <ol>
-          <li>Now , ∫cos(nx)dx = sin(nx)/n .... In this case n = 2
-
-</li>
-<li>Since 1 is a constant... The integral of 1 is x</li>
-
-<li>∫sec<sup>2</sup>x dx = tanx+C</li>
+          <li>
+            {" "}
+            <h5>
+              cos 2x = 2cos<sup>2</sup>x - 1
+            </h5>
+          </li>
+          <br />
+          <li>
+            {" "}
+            <h5>
+              ∫ sec<sup>2</sup>x dx = tan x
+            </h5>
+          </li>
         </ol>
 
-      </div>
-      <div class="modal-footer">
-    {/*    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Understood</button>  */}
-   <a href="/tw1"><button type="button" class="btn btn-primary">Try Now</button></a>
-      </div>
-    </div>
-  </div>
-</div>
+        <button
+          type="button"
+          class="btn btn-warning"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Click here for the second Hint
+        </button>
 
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Hint-2
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                In the the first sub-equation , 2 (which is a constant) should
+                be taken out of the integral.
+                <br /> <b>Eg - </b> ∫cf(x) dx = c∫f(x) dx ... here c is the
+                constant.
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                  onClick={enableThirdHint}
+                >
+                  Understood
+                </button>
+                <a href="/tw1">
+                  <button type="button" class="btn btn-primary">
+                    Try Now
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br></br>
+        <br></br>
 
-<br></br>
-        
+        <button
+          type="button"
+          class="btn btn-warning"
+          data-bs-toggle="modal"
+          disabled={DisThirdHint}
+          data-bs-target="#Hint3Modal"
+        >
+          Click here for the third Hint
+        </button>
+
+        <div
+          class="modal fade"
+          id="Hint3Modal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="Hint3ModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="Hint3ModalLabel">
+                  Hint-3
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Apply the formula number 1 to convert cos<sup>2</sup>x to cos2x
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                  onClick={enableFourthHint}
+                >
+                  Understood
+                </button>
+                <a href="/tw1">
+                  <button type="button" class="btn btn-primary">
+                    Try Now
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br></br>
+        <br></br>
+
+        <button
+          type="button"
+          class="btn btn-warning"
+          data-bs-toggle="modal"
+          disabled={DisFourthHint}
+          data-bs-target="#Hint4Modal"
+        >
+          Click here for the fourth Hint
+        </button>
+
+        <div
+          class="modal fade"
+          id="Hint4Modal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="Hint4ModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="Hint4ModalLabel">
+                  Hint-4
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <ol>
+                  <li>Now , ∫cos(nx)dx = sin(nx)/n .... In this case n = 2</li>
+                  <li>Since 1 is a constant... The integral of 1 is x</li>
+
+                  <li>
+                    ∫sec<sup>2</sup>x dx = tanx+C
+                  </li>
+                </ol>
+              </div>
+              <div class="modal-footer">
+                {/*    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Understood</button>  */}
+                <a href="/tw1">
+                  <button type="button" class="btn btn-primary">
+                    Try Now
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br></br>
+
         <a href="/">
           <button
             className="btn btn-outline-success my-3 mx-10"
@@ -153,7 +245,6 @@ export default function TWrong2() {
               color: "white",
             }}
           >
-          
             Try Again
           </button>
         </a>

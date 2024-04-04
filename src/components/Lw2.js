@@ -1,11 +1,14 @@
 import React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 
 const Lw2 = () => {
+  const location = useLocation();
+  const equation = location.state;
   const [DisThirdHint, setDisSecHint] = useState(true);
   const [DisFourthHint, setDisThrdHint] = useState(true);
+
   const enableThirdHint = () => {
     setDisSecHint(false);
   };
@@ -13,6 +16,8 @@ const Lw2 = () => {
   const enableFourthHint = () => {
     setDisThrdHint(false);
   };
+
+  console.log(equation);
 
   return (
     <>

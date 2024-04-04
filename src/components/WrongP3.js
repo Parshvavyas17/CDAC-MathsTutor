@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Navbar from "./Navbar";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function WrongP3() {
   const [DisSecHint, setDisSecHint] = useState(true);
   const [DisThrdHint, setDisThrdHint] = useState(true);
+  const navigator = useNavigate();
+  const location = useLocation();
+  const equation = location.state;
 
   const enableSecondHint = () => {
     setDisSecHint(false);
@@ -12,6 +16,12 @@ export default function WrongP3() {
   const enableThirdHint = () => {
     setDisThrdHint(false);
   };
+
+  const navigateRetry = () => {
+    navigator("/w1", { state: equation });
+  };
+
+  console.log(equation);
 
   return (
     <>
@@ -25,11 +35,11 @@ export default function WrongP3() {
       </header>
       <section>
         <h4 className="my-5 mx-5">
-          The integrted Equation entered by you in the previous step is
+          The integrated Equation entered by you in the previous step is
           incorrect
         </h4>
         <h5 className="my-5 mx-12">
-          <h3>Consider the Formulas given below:</h3>
+          <p>Consider the Formulas given below:</p>
           <br />
           <ol start="A">
             <li> ∫(f(x) + g(x)) dx = ∫ f(x) dx + ∫ g(x) dx </li>
@@ -45,7 +55,7 @@ export default function WrongP3() {
           To integrate the equation the following steps need to be followed :
         </h3>
 
-        <ol textAlign="center" start="1">
+        <ol textalign="center" start="1">
           <p>
             <b>Step 1</b> : The equation to be integrted should be divided into
             the number of terms in the equation and each sub equation should be
@@ -54,7 +64,7 @@ export default function WrongP3() {
 
           <button
             type="button"
-            class="btn btn-warning"
+            className="btn btn-warning"
             data-bs-toggle="modal"
             data-bs-target="#staticBackdrop"
           >
@@ -62,49 +72,48 @@ export default function WrongP3() {
           </button>
 
           <div
-            class="modal fade"
+            className="modal fade"
             id="staticBackdrop"
             data-bs-backdrop="static"
             data-bs-keyboard="false"
-            tabindex="-1"
+            tabIndex="-1"
             aria-labelledby="staticBackdropLabel"
             aria-hidden="true"
           >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">
+            <div className="modal-dialog">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h1 className="modal-title fs-5" id="staticBackdropLabel">
                     Hint-1
                   </h1>
                   <button
                     type="button"
-                    class="btn-close"
+                    className="btn-close"
                     data-bs-dismiss="modal"
                     aria-label="Close"
                   ></button>
                 </div>
-                <div class="modal-body">
+                <div className="modal-body">
                   In the the first sub-equation , 3 (which is a constant) should
                   be taken out of the integral.
                   <br /> <b>Eg - </b> ∫cf(x) dx = c∫f(x) dx ... here c is the
                   constant.
                 </div>
-                <div class="modal-footer">
-                  <a href="/w1">
-                    {" "}
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Try Now
-                    </button>{" "}
-                  </a>
-
+                <div className="modal-footer">
+                  {/* <a href="/w1"> */}{" "}
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                    onClick={navigateRetry}
+                  >
+                    Try Now
+                  </button>{" "}
+                  {/* </a> */}
                   <button
                     type="button"
                     onClick={enableSecondHint}
-                    class="btn btn-dark"
+                    className="btn btn-dark"
                     data-bs-dismiss="modal"
                   >
                     Understood
@@ -128,45 +137,45 @@ export default function WrongP3() {
         </button>
 
         <div
-          class="modal fade"
+          className="modal fade"
           id="exampleModalCenter"
-          tabindex="-1"
+          tabIndex="-1"
           role="dialog"
           aria-labelledby="exampleModalCenterTitle"
           aria-hidden="true"
         >
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">
+          <div className="modal-dialog modal-dialog-centered" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLongTitle">
                   Hint-2
                 </h5>
                 <button
                   type="button"
-                  class="btn-close"
+                  className="btn-close"
                   data-bs-dismiss="modal"
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="modal-body">
+              <div className="modal-body">
                 Now use the formula number 2 as stated above for the term which
                 is in coeff <sup>power</sup> format inside the integral.
               </div>
-              <div class="modal-footer">
-                {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"></button> */}
-                <a href="/w1">
-                  {" "}
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Try Now
-                  </button>{" "}
-                </a>
+              <div className="modal-footer">
+                {/* <button type="button" className="btn btn-secondary" data-bs-dismiss="modal"></button> */}
+                {/* <a href="/w1"> */}{" "}
                 <button
                   type="button"
-                  class="btn btn-dark"
+                  className="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                  onClick={navigateRetry}
+                >
+                  Try Now
+                </button>{" "}
+                {/* </a> */}
+                <button
+                  type="button"
+                  className="btn btn-dark"
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModalCenter"
                   onClick={enableThirdHint}
@@ -191,14 +200,14 @@ export default function WrongP3() {
       </button>
 
       <div
-        class="modal fade bd-example-modal-lg"
-        tabindex="-1"
+        className="modal fade bd-example-modal-lg"
+        tabIndex="-1"
         role="dialog"
         aria-labelledby="myLargeModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
+        <div className="modal-dialog modal-lg">
+          <div className="modal-content">
             <b>
               {" "}
               In this case the sub-equation to be integrated is x<sup>
@@ -207,20 +216,24 @@ export default function WrongP3() {
               where the value of n is substituted as 2 in the formula number 2
               as stated above
             </b>
-            {/*   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Try Now</button>  */}
+            {/*   <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Try Now</button>  */}
             <br></br>
 
-            <a href="/w1">
-              <button type="button" class="btn btn-dark btn-lg btn-block">
-                Understood
-              </button>
-            </a>
+            {/* <a href="/w1"> */}
+            <button
+              type="button"
+              className="btn btn-dark btn-lg btn-block"
+              onClick={navigateRetry}
+            >
+              Understood
+            </button>
+            {/* </a> */}
           </div>
         </div>
       </div>
       <br></br>
 
-      <a href="/w2">
+      {/* <a href="/w2">
         <button
           className="btn btn-outline-success"
           style={{
@@ -233,7 +246,7 @@ export default function WrongP3() {
         >
           Next
         </button>
-      </a>
+      </a> */}
     </>
   );
 }

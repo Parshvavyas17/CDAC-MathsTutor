@@ -1,15 +1,34 @@
-import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./Navbar";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function Trigo() {
-  const [route, setRoute] = useState("");
+  const [equation, setEquation] = useState({});
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const getEquation = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/api/trigo");
+        return response.data.error ? {} : response.data.data;
+      } catch (err) {
+        console.log(err.messsage);
+        return {};
+      }
+    };
+
+    getEquation()
+      .then((data) => setEquation(data))
+      .catch((err) => console.log(err));
+  }, []);
+
   const handleClick = () => {
     if (document.getElementById("answer").value === "1.57") {
-      setRoute("/tr1");
+      navigate("/tr1", { state: equation });
     } else {
-      alert("Wrong Answer")
-      setRoute("/tw1");
+      alert("Wrong Answer");
+      navigate("/tw1", { state: equation });
     }
   };
 
@@ -72,20 +91,18 @@ export default function Trigo() {
                 <input className= "" style={{width: '50px',marginLeft: '10px', marginRight: '2px'}} type="number" />
                 <input className= "" style={{width: '50px',marginLeft: '10px', marginRight: '2px'}} type="number" />
                 <sup><input type="number" style={{width: '40px'}}/></sup> */}
-           2cos <sup>2</sup>x + sec <sup>2</sup>x
+          2cos <sup>2</sup>x + sec <sup>2</sup>x
           <br />
           <label htmlFor="noofterms" className="my-3 mx-2">
             The Upper Limit is :
           </label>
           {/* <input className= "mx-5" style={{width: '50px'}} type="number" /> */}
-          {Math.PI/2}
+          {Math.PI / 2}
           <br />
           <label htmlFor="noofterms" className="my-3 mx-2">
             The lower limit is : 0
           </label>
           {/* <input className= "mx-5" style={{width: '50px'}} type="number" /> */}
-          
-          
           <br />
           <label htmlFor="noofterms" className="my-3 mx-2">
             The Area Under the Curve is:
@@ -99,24 +116,22 @@ export default function Trigo() {
           <b> Note: Enter the answer upto two decimal places </b>
           <br />
         </form>
-        <a href={route}>
-          <button
-            onClick={handleClick}
-            className="btn btn-outline-success my-3 mx-10"
-            style={{
-              height: "75px",
-              width: "100px",
-              borderRadius: "50%",
-              textAlign: "center",
-              marginLeft: "75px",
-              backgroundColor: "#548CFF",
-              color: "white",
-              border: "1px solid black",
-            }}
-          >
-            Submit
-          </button>
-        </a>
+        <button
+          onClick={handleClick}
+          className="btn btn-outline-success my-3 mx-10"
+          style={{
+            height: "75px",
+            width: "100px",
+            borderRadius: "50%",
+            textAlign: "center",
+            marginLeft: "75px",
+            backgroundColor: "#548CFF",
+            color: "white",
+            border: "1px solid black",
+          }}
+        >
+          Submit
+        </button>
         {/* <a href="/tw1"><button className='btn btn-outline-success my-3 mx-10' style={{height: '75px', width: '100px',borderRadius: '50%', textAlign: 'center', marginLeft: '75px',backgroundColor:'#548CFF',color:'white',border:'1px solid black'}}>Wrong</button></a> */}
       </section>
     </>
