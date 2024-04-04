@@ -87,18 +87,18 @@ export default function WrongP2() {
       loPo3
     );
     if (
-      upCo1 == 2 &&
-      upPo1 == 3 &&
-      upCo2 == -2 &&
-      upPo2 == 2 &&
-      upCo3 == 10 &&
-      upPo3 == 1 &&
-      loCo1 == 1 &&
-      loPo1 == 3 &&
-      loCo2 == -1 &&
-      loPo2 == 2 &&
-      loCo3 == 5 &&
-      loPo3 == 1
+      upCo1 === 2 &&
+      upPo1 === 3 &&
+      upCo2 === -2 &&
+      upPo2 === 2 &&
+      upCo3 === 10 &&
+      upPo3 === 1 &&
+      loCo1 === 1 &&
+      loPo1 === 3 &&
+      loCo2 === -1 &&
+      loPo2 === 2 &&
+      loCo3 === 5 &&
+      loPo3 === 1
     ) {
       alert("Right Answer!!!");
       navigator("/r1");

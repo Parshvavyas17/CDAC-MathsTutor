@@ -222,13 +222,13 @@ export default function WrongP3() {
 
       <a href="/w2">
         <button
-          className="btn btn-outline-success my-3 mx-10"
+          className="btn btn-outline-success"
           style={{
             height: "75px",
             width: "200px",
             borderRadius: "50%",
             textAlign: "center",
-            marginLeft: "1200px",
+            marginLeft: "1100px",
           }}
         >
           Next
