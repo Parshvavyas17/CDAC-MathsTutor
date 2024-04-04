@@ -7,51 +7,51 @@ export default function WrongP2() {
   const navigator = useNavigate();
   const location = useLocation();
   const equation = location.state;
-  const [upCo1, setUpCo1] = useState(null);
+  const [upCo1, setUpCo1] = useState("");
   const handleUpCo1 = (e) => {
     setUpCo1(e.target.value);
   };
-  const [upCo2, setUpCo2] = useState(null);
+  const [upCo2, setUpCo2] = useState("");
   const handleUpCo2 = (e) => {
     setUpCo2(e.target.value);
   };
-  const [upCo3, setUpCo3] = useState(null);
+  const [upCo3, setUpCo3] = useState("");
   const handleUpCo3 = (e) => {
     setUpCo3(e.target.value);
   };
-  const [upPo1, setUpPo1] = useState(null);
+  const [upPo1, setUpPo1] = useState("");
   const handleUpPo1 = (e) => {
     setUpPo1(e.target.value);
   };
-  const [upPo2, setUpPo2] = useState(null);
+  const [upPo2, setUpPo2] = useState("");
   const handleUpPo2 = (e) => {
     setUpPo2(e.target.value);
   };
-  const [upPo3, setUpPo3] = useState(null);
+  const [upPo3, setUpPo3] = useState("");
   const handleUpPo3 = (e) => {
     setUpPo3(e.target.value);
   };
-  const [loCo1, setLoCo1] = useState(null);
+  const [loCo1, setLoCo1] = useState("");
   const handleLoCo1 = (e) => {
     setLoCo1(e.target.value);
   };
-  const [loCo2, setLoCo2] = useState(null);
+  const [loCo2, setLoCo2] = useState("");
   const handleLoCo2 = (e) => {
     setLoCo2(e.target.value);
   };
-  const [loCo3, setLoCo3] = useState(null);
+  const [loCo3, setLoCo3] = useState("");
   const handleLoCo3 = (e) => {
     setLoCo3(e.target.value);
   };
-  const [loPo1, setLoPo1] = useState(null);
+  const [loPo1, setLoPo1] = useState("");
   const handleLoPo1 = (e) => {
     setLoPo1(e.target.value);
   };
-  const [loPo2, setLoPo2] = useState(null);
+  const [loPo2, setLoPo2] = useState("");
   const handleLoPo2 = (e) => {
     setLoPo2(e.target.value);
   };
-  const [loPo3, setLoPo3] = useState(null);
+  const [loPo3, setLoPo3] = useState("");
   const handleLoPo3 = (e) => {
     setLoPo3(e.target.value);
   };
@@ -74,20 +74,20 @@ export default function WrongP2() {
       alert("Enter all the values!");
       return;
     }
-    console.log(
-      upCo1,
-      upCo2,
-      upCo3,
-      upPo1,
-      upPo2,
-      upPo3,
-      loCo1,
-      loCo2,
-      loCo3,
-      loPo1,
-      loPo2,
-      loPo3
-    );
+    // console.log(
+    //   upCo1,
+    //   upCo2,
+    //   upCo3,
+    //   upPo1,
+    //   upPo2,
+    //   upPo3,
+    //   loCo1,
+    //   loCo2,
+    //   loCo3,
+    //   loPo1,
+    //   loPo2,
+    //   loPo3
+    // );
     if (
       upCo1 === "2" &&
       upPo1 === "3" &&
@@ -106,23 +106,23 @@ export default function WrongP2() {
       navigator("/r1");
     } else {
       alert("Wrong Answer!!!");
-      setUpCo1(null);
-      setUpPo1(null);
-      setUpCo2(null);
-      setUpPo2(null);
-      setUpCo3(null);
-      setUpPo3(null);
-      setLoCo1(null);
-      setLoPo1(null);
-      setLoCo2(null);
-      setLoPo2(null);
-      setLoCo3(null);
-      setLoPo3(null);
-      navigator("/w3");
+      setUpCo1("");
+      setUpPo1("");
+      setUpCo2("");
+      setUpPo2("");
+      setUpCo3("");
+      setUpPo3("");
+      setLoCo1("");
+      setLoPo1("");
+      setLoCo2("");
+      setLoPo2("");
+      setLoCo3("");
+      setLoPo3("");
+      navigator("/w3", { state: equation });
     }
   };
 
-  console.log(equation);
+  // console.log(equation);
 
   return (
     <>
@@ -270,7 +270,7 @@ export default function WrongP2() {
             <a href="/w3"><button className='btn btn-outline-success my-3 mx-10' style={{height: '75px', width: '100px',borderRadius: '50%', textAlign: 'center', marginLeft: '75px'}}>Wrong</button></a> */}
         <button
           type="button"
-          class="btn btn-warning"
+          className="btn btn-warning"
           data-bs-toggle="modal"
           data-bs-target="#staticBackdrop"
         >
@@ -278,39 +278,39 @@ export default function WrongP2() {
         </button>
 
         <div
-          class="modal fade"
+          className="modal fade"
           id="staticBackdrop"
           data-bs-backdrop="static"
           data-bs-keyboard="false"
-          tabindex="-1"
+          tabIndex="-1"
           aria-labelledby="staticBackdropLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h1 className="modal-title fs-5" id="staticBackdropLabel">
                   Hint
                 </h1>
                 <button
                   type="button"
-                  class="btn-close"
+                  className="btn-close"
                   data-bs-dismiss="modal"
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="modal-body">
+              <div className="modal-body">
                 Formula to be applied : <sub>b</sub>∫<sup>a</sup> f(x) dx =
                 F(b)- F(a) <br></br> Here F(b) is the integrated equation after
                 substituting the upper limit
                 <br></br> Similarly , F(a) is the integrated equation after
                 substituting the lower limit
               </div>
-              <div class="modal-footer">
-                {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
+              <div className="modal-footer">
+                {/* <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
                 <button
                   type="button"
-                  class="btn btn-dark"
+                  className="btn btn-dark"
                   data-bs-dismiss="modal"
                 >
                   Understood

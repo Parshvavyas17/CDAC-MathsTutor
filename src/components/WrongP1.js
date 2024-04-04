@@ -6,27 +6,27 @@ export default function WrongP1() {
   const navigator = useNavigate();
   const location = useLocation();
   const equation = location.state;
-  const [upCo1, setUpCo1] = useState(null);
+  const [upCo1, setUpCo1] = useState("");
   const handleUpCo1 = (e) => {
     setUpCo1(e.target.value);
   };
-  const [upCo2, setUpCo2] = useState(null);
+  const [upCo2, setUpCo2] = useState("");
   const handleUpCo2 = (e) => {
     setUpCo2(e.target.value);
   };
-  const [upCo3, setUpCo3] = useState(null);
+  const [upCo3, setUpCo3] = useState("");
   const handleUpCo3 = (e) => {
     setUpCo3(e.target.value);
   };
-  const [upPo1, setUpPo1] = useState(null);
+  const [upPo1, setUpPo1] = useState("");
   const handleUpPo1 = (e) => {
     setUpPo1(e.target.value);
   };
-  const [upPo2, setUpPo2] = useState(null);
+  const [upPo2, setUpPo2] = useState("");
   const handleUpPo2 = (e) => {
     setUpPo2(e.target.value);
   };
-  const [upPo3, setUpPo3] = useState(null);
+  const [upPo3, setUpPo3] = useState("");
   const handleUpPo3 = (e) => {
     setUpPo3(e.target.value);
   };
@@ -36,30 +36,30 @@ export default function WrongP1() {
       alert("Enter all the values!");
       return;
     }
-    console.log(upCo1, upCo2, upCo3, upPo1, upPo2, upPo3);
+    // console.log(upCo1, upCo2, upCo3, upPo1, upPo2, upPo3);
     if (
-      upCo1 === "1" &&
-      upPo1 === "3" &&
-      upCo2 === "-1" &&
-      upPo2 === "2" &&
-      upCo3 === "5" &&
-      upPo3 === "1"
+      parseInt(upCo1) === equation.answer.coefX3 &&
+      parseInt(upPo1) === 3 &&
+      parseInt(upCo2) === equation.answer.coefX2 &&
+      parseInt(upPo2) === 2 &&
+      parseInt(upCo3) === equation.answer.coefX1 &&
+      parseInt(upPo3) === 1
     ) {
       alert("Right Answer!!!");
       navigator("/w2", { state: equation });
     } else {
       alert("Wrong Answer!!!");
-      setUpCo1(null);
-      setUpPo1(null);
-      setUpCo2(null);
-      setUpPo2(null);
-      setUpCo3(null);
-      setUpPo3(null);
+      setUpCo1("");
+      setUpPo1("");
+      setUpCo2("");
+      setUpPo2("");
+      setUpCo3("");
+      setUpPo3("");
       navigator("/w3", { state: equation });
     }
   };
 
-  console.log(equation);
+  // console.log(equation);
 
   return (
     <>
@@ -74,7 +74,8 @@ export default function WrongP1() {
       <section className="my-5 mx-4">
         <h3>Polynomial Equation displayed to you: </h3>
         <h5>
-          3x<sup>2</sup> - 2x + 5
+          {equation.question.coefX2}x<sup>2</sup> + {equation.question.coefX1}x
+          + {equation.question.coefX0}
         </h5>
         <h3>Integrated Equation: </h3>
         Substitute Here: (
@@ -137,35 +138,35 @@ export default function WrongP1() {
         <div></div>
         <button
           type="button"
-          class="btn btn-warning"
+          className="btn btn-warning"
           data-bs-toggle="modal"
           data-bs-target="#staticBackdrop"
         >
           Click here for Hint
         </button>
         <div
-          class="modal fade"
+          className="modal fade"
           id="staticBackdrop"
           data-bs-backdrop="static"
           data-bs-keyboard="false"
-          tabindex="-1"
+          tabIndex="-1"
           aria-labelledby="staticBackdropLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+          <div className="modal-dialog">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h1 className="modal-title fs-5" id="staticBackdropLabel">
                   Hint
                 </h1>
                 <button
                   type="button"
-                  class="btn-close"
+                  className="btn-close"
                   data-bs-dismiss="modal"
                   aria-label="Close"
                 ></button>
               </div>
-              <div class="modal-body">
+              <div className="modal-body">
                 Formula to be applied :{" "}
                 <b>
                   {" "}
@@ -174,11 +175,11 @@ export default function WrongP1() {
                 <br></br>where n is the power of the term in the equation to be
                 integrated
               </div>
-              <div class="modal-footer">
-                {/* <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
+              <div className="modal-footer">
+                {/* <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button> */}
                 <button
                   type="button"
-                  class="btn btn-dark"
+                  className="btn btn-dark"
                   data-bs-dismiss="modal"
                 >
                   Understood

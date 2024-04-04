@@ -10,17 +10,15 @@ export default function Mw3() {
     setUpCo1(e.target.value);
   };
 
-
-const [upCo2, setUpCo2] = useState("");
-const handleUpCo2 = (e) => {
-  setUpCo2(e.target.value);
-};
+  const [upCo2, setUpCo2] = useState("");
+  const handleUpCo2 = (e) => {
+    setUpCo2(e.target.value);
+  };
 
   const [upPo1, setUpPo1] = useState("");
   const handleUpPo1 = (e) => {
     setUpPo1(e.target.value);
   };
-
 
   const [loCo1, setLoCo1] = useState("");
   const handleLoCo1 = (e) => {
@@ -37,50 +35,49 @@ const handleUpCo2 = (e) => {
   };
 
   console.log(
-      upCo1,
-      
-      //upCo3,
-      upPo1,
-      upCo2,
-      //upPo2,
-      //upPo3,
-      loCo1,
-      loPo1,
-      loCo2,
-      //loCo3,
-      
-     // loPo2,
-      //loPo3
-    );
+    upCo1,
 
+    //upCo3,
+    upPo1,
+    upCo2,
+    //upPo2,
+    //upPo3,
+    loCo1,
+    loPo1,
+    loCo2
+    //loCo3,
+
+    // loPo2,
+    //loPo3
+  );
 
   const handleSubmit = (e) => {
     if (
-      upCo1 == "" ||
-      upCo2 == "" ||
-      //!upCo3 || 
-      upPo1 == "" ||
-     // !upPo2 ||
+      upCo1 === "" ||
+      upCo2 === "" ||
+      //!upCo3 ||
+      upPo1 === "" ||
+      // !upPo2 ||
       //!upPo3 ||
-      loCo1 == "" ||
-      loCo2 == "" ||
+      loCo1 === "" ||
+      loCo2 === "" ||
       //!loCo3 ||
-      loPo1 == ""
-      //!loPo2 
+      loPo1 === ""
+      //!loPo2
       //!loPo3
     ) {
       alert("Enter all the values!");
       return;
     }
-    
+
     if (
-      upCo1 == "2.71" &&
-      upPo1 == "1"&&
-      upCo2 == "1" &&
-      loCo1 == "2.71" &&
-      loPo1 == "0"  &&
-      loCo2 == "0"
-     // loPo2 == 2 
+      upCo1 === "2.71" &&
+      upPo1 === "1" &&
+      upCo2 === "1" &&
+      loCo1 === "2.71" &&
+      loPo1 === "0" &&
+      loCo2 === "0"
+      // loPo2 == 2
       //loCo3 == 5 &&
       //loPo3 == 1
       //upPo2 == 2 &&
@@ -91,7 +88,7 @@ const handleUpCo2 = (e) => {
       navigator("/r1");
     } else {
       alert("Wrong Answer!!!");
-      setUpCo1("")
+      setUpCo1("");
       setUpPo1("");
       setUpCo2("");
       //setUpPo2(null);
@@ -118,9 +115,10 @@ const handleUpCo2 = (e) => {
         </h2>
       </header>
       <section>
-        <h5 className="my-5 mx-5"></h5>
+        <h5 className="my-5 mx-5"> </h5>
         <h5 className="my-5 mx-5">
-          In this case f(x) = e <sup>x</sup> / (x+1) where b(Upper Limit )= 1 and a(Lower Limit) = 0
+          In this case f(x) = e <sup>x</sup> / (x+1) where b(Upper Limit )= 1
+          and a(Lower Limit) = 0
         </h5>
         <h5 className="my-5 mx-5">
           Substitute Here: (
@@ -141,8 +139,7 @@ const handleUpCo2 = (e) => {
               onChange={handleUpPo1}
             />
           </sup>
-          /
-          (
+          / (
           <input
             className=""
             style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
@@ -151,10 +148,7 @@ const handleUpCo2 = (e) => {
             value={upCo2}
             onChange={handleUpCo2}
           />
-          +1
-          )
-
-          ) - (
+          +1 ) ) - (
           <input
             className=""
             style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
@@ -172,8 +166,8 @@ const handleUpCo2 = (e) => {
               onChange={handleLoPo1}
             />
           </sup>
-          /
-        ( <input
+          / ({" "}
+          <input
             className=""
             style={{ width: "50px", marginLeft: "10px", marginRight: "2px" }}
             type="text"
@@ -181,10 +175,7 @@ const handleUpCo2 = (e) => {
             value={loCo2}
             onChange={handleLoCo2}
           />
-    +1
-        )
-
-          )
+          +1 ) )
           <button
             className="btn btn-outline-success my-3 mx-10"
             style={{
@@ -201,8 +192,10 @@ const handleUpCo2 = (e) => {
           </button>
           <br />
         </h5>
-        <p> <b> Note : Substitute the value of e upto 2 decimal places only. </b>
-     </p>
+        <p>
+          {" "}
+          <b> Note : Substitute the value of e upto 2 decimal places only. </b>
+        </p>
 
         {/* <a href="/r1"><button className='btn btn-outline-success my-3 mx-10' style={{height: '75px', width: '100px',borderRadius: '50%', textAlign: 'center', marginLeft: '75px'}}>Right</button></a>
             <a href="/w3"><button className='btn btn-outline-success my-3 mx-10' style={{height: '75px', width: '100px',borderRadius: '50%', textAlign: 'center', marginLeft: '75px'}}>Wrong</button></a> */}
